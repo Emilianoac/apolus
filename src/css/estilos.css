@@ -1,0 +1,29 @@
+body {
+  font-size: 16px;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+}
+.main-container nav {
+  grid-row: 1/2;
+  grid-column: 1/4;
+}
+.main-container aside {
+  grid-column: 1/2;
+  height: 100vh;
+}
+.main-container aside ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 3rem;
+  text-align: center;
+}
+.main-container aside ul li {
+  margin-bottom: 1.8em;
+}
+.main-container aside ul a {
+  font-size: 1.3em;
+  color: #585858;
+}
