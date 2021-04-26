@@ -16,5 +16,7 @@
     "url": "https://github.com/Emilianoac/apolus/issues"
   },
   "homepage": "https://github.com/Emilianoac/apolus#readme",
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^5.0.0-beta3"
+  }
 }
