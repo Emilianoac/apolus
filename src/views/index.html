@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="../css/estilos.css">
     <title>Apolus | Benee</title>
@@ -13,7 +11,7 @@
   <body>
     <input type="checkbox" hidden id="darkmodeHidden">
     <div class="main-container">
-      <nav class="navbar navbar-expand px-3 ps-0 shadow">
+      <nav class="top-navbar navbar navbar-expand px-3 ps-0 shadow">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
             <?xml version="1.0" encoding="utf-8"?>
@@ -64,10 +62,10 @@
             </form>
             <ul class="navbar-nav ms-auto ">
               <li class="nav-item me-3 d-none d-md-block">
-                <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Iniciar sesión</a>      
+                <a class="nav-link active" aria-current="page" href="#!" data-bs-toggle="modal" data-bs-target="#exampleModal">Iniciar sesión</a>      
               </li>
-              <li class="nav-item d-none d-md-block">
-                <a class="nav-link btn btn-primary text-white px-3" aria-current="page" href="#">Crear una cuenta</a> 
+              <li class="nav-item">
+                <a class="nav-link btn btn-primary text-white px-3" aria-current="page" href="#!">Crear una cuenta</a> 
               </li>
               <li class="nav-item px-4 pe-0 d-flex align-items-center">
                 <label class="switch" title="Cambiar modo de color">
@@ -81,32 +79,33 @@
       </nav>
       <aside class="menu-lateral">
         <ul>
-          <li><a href="" data-bs-toggle="tooltip" data-bs-placement="right" title="Inicio"><i class="fas fa-home"></i></a></li>
-          <li><a href="" data-bs-toggle="tooltip" data-bs-placement="right" title="Buscar"><i class="fa fa-search"></i></a></li>
-          <li><a href="" data-bs-toggle="tooltip" data-bs-placement="right" title="Favoritos"><i class="fas fa-heart"></i></a></li>
-          <li><a href="" data-bs-toggle="tooltip" data-bs-placement="right" title="Listas de reproducción"><i class="fas fa-music"></i></a></li>
-          <li><a href="" data-bs-toggle="tooltip" data-bs-placement="right" title="Amigos"><i class="fas fa-user-friends"></i></a></li>
-          <li><hr class="mx-3"><a href="" data-bs-toggle="tooltip" data-bs-placement="right" title="Ajustes"><i class="fas fa-cog"></i></a></li>
+          <li><a href="#!" data-bs-toggle="tooltip" data-bs-placement="right" title="Inicio"><i class="fas fa-home"></i></a></li>
+          <li><a href="#!" data-bs-toggle="tooltip" data-bs-placement="right" title="Buscar"><i class="fa fa-search"></i></a></li>
+          <li><a href="#!" data-bs-toggle="tooltip" data-bs-placement="right" title="Favoritos"><i class="fas fa-heart"></i></a></li>
+          <li><a href="#!" data-bs-toggle="tooltip" data-bs-placement="right" title="Listas de reproducción"><i class="fas fa-music"></i></a></li>
+          <li><a href="#!" data-bs-toggle="tooltip" data-bs-placement="right" title="Amigos"><i class="fas fa-user-friends"></i></a></li>
+          <li><hr class="mx-3"><a href="#!" data-bs-toggle="tooltip" data-bs-placement="right" title="Ajustes"><i class="fas fa-cog"></i></a></li>
         </ul>
       </aside>
 
-      <main class="contenido-principal">
+      <main class="main-perfil-artista">
         <div class="row">
+
           <div class="col-lg-7 position-relative pe-lg-4 pb-4 pb-lg-0">
-            <section class="container-banner-artista">
+            <section class="container-banner-artista shadow-card">
               <img class="img-artista img-fluid" src="../img/benee-02.jpg" alt="">
               <h1 class="nombre-artista-banner">Benee</h1>
               <button id="btn-seguir" class="btn bg-light"><span>Seguir</span> <i class="fas fa-plus"></i></button>
               <ul class="redes-sociales d-flex list-unstyled">
-                <li><a href=""><i class="fab fa-instagram    "></i></a></li>
-                <li><a href=""><i class="fab fa-twitter    "></i></a></li>
-                <li><a href=""><i class="fab fa-facebook    "></i></a></li>
-                <li><a href=""><i class="fab fa-youtube    "></i></a></li>
+                <li><a href="#!"><i class="fab fa-instagram " title="Instagram"></i></a></li>
+                <li><a href="#!"><i class="fab fa-twitter " title="Twitter"></i></a></li>
+                <li><a href="#!"><i class="fab fa-facebook " title="Facebook"></i></a></li>
+                <li><a href="#!"><i class="fab fa-youtube " title="Youtube"></i></a></li>
               </ul> 
             </section>     
 
-            <h2 class="titulo-seccion mt-5">Albumes</h4>
-            <section class="albumes">
+            <h2 class="titulo-seccion mt-5 mt-lg-4">Albumes</h4>
+            <section class="albumes shadow-card">
               <figure class="album">
                 <a href="#!">
                   <div class="img-container">
@@ -130,32 +129,29 @@
                   </div>
                   <figcaption> Hey U X <time class="d-block" datetime="2020-11-13">(2020)</time></figcaption>
                 </a>
-                <button class="btn btn-danger">Color</button>
               </figure>
             </section> 
           </div>
 
           <div class="col-lg-5 mt-4 mt-sm-0">
-            <article class="cancion-actual">
-              <div class="miniatura__cancion-actual">
+            <article class="reproductor-album shadow-card">
+              <div class="miniatura__reproductor-album">
                 <img class="img-fluid" src="../img/hey.jpg" alt="mininatura cancion">
               </div>
-              <div class="datos__cancion-actual">
-                  <h2 class="titulo__cancion-actual">Hey U X</h2>
-                  <h3 class="nombre-artista__cancion-actual">Benee</h3>
-                  <span class="duracion__cancion-actual">2020</span>
+              <div class="datos__reproductor-album">
+                  <h4 class="titulo__reproductor-album">Hey U X</h4>
+                  <h3 class="nombre-artista__reproductor-album">Benee</h3>
+                  <span class="fecha-album">2020</span>
               </div>
-              <div class="boton-reproductor">
-                <button data-play="" id="btn-reprocutor" class="btn">
-                  <i class="fas fa-play-circle "></i>
-                </button>
-              </div>
-              <button data-favorito="" class="marcar-favorito btn" title="Marcar como favorito"><i class="far fa-heart"></i></button>
+              <button class="btn btn-play" data-play="" >
+                <i class="fas fa-play-circle "></i>
+              </button>
+              <button data-favorito="" class="marcar-favorito btn" title="Marcar como favorito">
+                <i class="far fa-heart"></i>
+              </button>
             </article>
-            <div class="container-lista-reproduccion mt-4">
-              <ul class="lista-reproduccion">
-
-              </ul>
+            <div class="container-lista-reproduccion shadow-card mt-4">
+              <ul class="lista-reproduccion"> </ul>
             </div>
           </div>
         </div>
@@ -173,13 +169,13 @@
                   <span>Benee</span>
                 </div>
                 <button data-favorito="" class="marcar-favorito btn" title="Favorito"><i class="fas fa-heart"></i></button>
-                <button class="btn-reproducir-movil btn d-block d-sm-none"><i class="fas fa-play-circle"></i></button>
+                <button class="btn-reproducir-movil btn-play btn d-block d-sm-none"  data-play=""><i class="fas fa-play-circle"></i></button>
               </div>
             </div>
             <div class="col-sm-4 d-sm-block d-none text-center">
               <div class="controles-principales-reproductor">
                 <button class="btn-atras btn"><i class="fas fa-backward"></i></button>
-                <button data-play="" class="btn-reproducir btn" title="Reproducir"> <i class="fas fa-play-circle"></i></button>
+                <button class="btn-reproducir btn btn-play" data-play="" title="Reproducir"> <i class="fas fa-play-circle"></i></button>
                 <button class="btn-siguiente btn"><i class="fas fa-forward"></i></button>
               </div>
             </div>
@@ -190,10 +186,10 @@
           </div>
         </div>
         <ul class="fixed-menu-movil d-flex d-sm-none justify-content-around">
-          <li><a href="" data-bs-toggle="tooltip" data-bs-placement="right" title="Inicio"><i class="fas fa-home"></i></a></li>
-          <li><a href="" data-bs-toggle="tooltip" data-bs-placement="right" title="Buscar"><i class="fa fa-search"></i></a></li>
-          <li><a href="" data-bs-toggle="tooltip" data-bs-placement="right" title="Favoritos"><i class="fas fa-heart"></i></a></li>
-          <li><a href="" data-bs-toggle="tooltip" data-bs-placement="right" title="Listas de reproducción"><i class="fas fa-stream"></i></a></li>
+          <li><a href="!#" data-bs-toggle="tooltip" data-bs-placement="right" title="Inicio"><i class="fas fa-home"></i></a></li>
+          <li><a href="!#" data-bs-toggle="tooltip" data-bs-placement="right" title="Buscar"><i class="fa fa-search"></i></a></li>
+          <li><a href="!#" data-bs-toggle="tooltip" data-bs-placement="right" title="Favoritos"><i class="fas fa-heart"></i></a></li>
+          <li><a href="!#" data-bs-toggle="tooltip" data-bs-placement="right" title="Listas de reproducción"><i class="fas fa-stream"></i></a></li>
         </ul>
       </aside>
     </div>
