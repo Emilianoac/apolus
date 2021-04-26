@@ -1,7 +1,17 @@
-$color-primario: #5034E5;
-$color-secundario :#ff7234;
-$light : #ffffff;
-$gris-dark : #494848;
-$dark : #1A1A1A;
-$dark-med: #232323;
-$dark-light : #272727;
+/// Colores
+$royal-blue:        hsl(249, 77%, 55%);
+$burning-orange:    hsl(18, 100%, 60%);
+$light :            hsl(0, 0%, 100%);
+$gris-dark :        hsl(0, 1%, 28%);
+$gris-med   :        hsl(0, 0%, 50%);
+$gris-light :       hsl(0, 0%, 90%);
+$dark-light :       hsl(0, 0%, 15%);
+$dark-med:          hsl(0, 0%, 14%);
+$dark :             hsl(0, 0%, 10%);
+
+/// Colores Globales
+$primary:   $royal-blue;
+$secondary: $burning-orange;
+
+/// Modal
+$modal-transition: transform 0.4s ease-out;

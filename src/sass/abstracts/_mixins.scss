@@ -1,0 +1,12 @@
+/// Crea las sombras para los contenedores
+@mixin sombra-cajas {
+    content: "";
+    background-color: $gris-light;
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    z-index: -1;
+}
