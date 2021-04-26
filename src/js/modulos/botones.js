@@ -2,6 +2,7 @@
 const logicaBotones = () => {
     let btnReproductor = document.querySelectorAll('[data-play=""]')
     let btnFavorito = document.querySelectorAll('[data-favorito=""]')
+    let btnSeguir = document.querySelector('#btn-seguir')
 
     for (let btn of btnReproductor) {
         btn.addEventListener('click', () => {
@@ -27,6 +28,17 @@ const logicaBotones = () => {
             }
         })
     }
+
+    btnSeguir.addEventListener('click', () => {
+        btnSeguir.querySelector('svg').classList.toggle('fa-check')
+        btnSeguir.querySelector('svg').classList.toggle('fa-plus')
+        if (btnSeguir.querySelector('svg').classList.contains('fa-check')) {
+            btnSeguir.querySelector('span').textContent = 'Siguiendo'
+        } else {
+            btnSeguir.querySelector('span').textContent = 'Seguir'
+        }
+
+    })
 }
 
 export default logicaBotones
