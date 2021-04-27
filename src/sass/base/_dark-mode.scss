@@ -135,5 +135,18 @@ body.dark{
                 background-color: darken($dark-med,  1);
             }
         }
+        
+        .reproductor-principal {
+            
+
+            .fixed-menu-movil {
+                border-top: 1px solid $gris-dark;
+                background-color: $dark;
+
+                a {
+                    color: $white;
+                }
+            }
+        }
     }
 }
