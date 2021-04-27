@@ -34,7 +34,7 @@
     content: '';
     height: 30px;
     width: 30px;
-    background-image: url(/src/img/sun.svg);
+    background-image: url('./');
     background-size: 15px 15px;
     background-repeat: no-repeat;
     background-position: center;
@@ -54,7 +54,7 @@
     content: '';
     height: 30px;
     width: 30px;
-    background-image: url(/src/img/moon.png);
+    background-image: url(/img/moon.svg);
     background-size: 15px 15px;
     background-repeat: no-repeat;
     background-position: center;
