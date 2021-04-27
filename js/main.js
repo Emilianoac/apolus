@@ -3,7 +3,7 @@ import logicaBotones from './modulos/botones.js'
 import modoOscuro from './modulos/modo_oscuro.js'
 
 let listaReproducion = document.querySelector('.lista-reproduccion')
-let liTemplate = document.querySelector('#item-lista-reprodccion').content
+let liTemplate = document.querySelector('#item-lista-reproduccion').content
 
 canciones.forEach(cancion => {
     liTemplate.querySelector('.nombre-artista__lista-reproduccion').textContent = cancion.nombreArtista
