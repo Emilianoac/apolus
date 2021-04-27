@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "watch": "sass --watch --no-source-map sass/main.scss:css/estilos.css"
+    "watch": "sass --watch --no-source-map src/sass/main.scss:src/css/estilos.css"
   },
   "repository": {
     "type": "git",
