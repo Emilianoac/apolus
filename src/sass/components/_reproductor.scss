@@ -1,16 +1,16 @@
 .reproductor-principal {
-    background-color: white;
+    background-color: $white;
     box-shadow: -8px 0px 9px rgba(0, 0, 0, 0.199);
 
     .fixed-menu-movil {
         list-style-type: none;
         margin: 0;
         padding: 0.6em;
-        background-color: $dark;
-        border-top: 1px solid $dark-light;
+        background-color: $white;
+        border-top: 1px solid $gray-500;
 
         a {
-            color: $gris-light;
+            color: $dark-light;
         }
     }
 

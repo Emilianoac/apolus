@@ -130,9 +130,17 @@
             height: auto;
 
             .top-navbar {
+                
+                .navbar-brand {
+                    
+                    svg {
+                        width: 95px;
+                    }
+                }
 
                 .nav-link {
-                    font-size: 0.86rem;
+                    font-size: 0.84rem;
+                    padding: 0.4rem;
                 }
             }
 
