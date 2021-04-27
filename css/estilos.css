@@ -10740,6 +10740,17 @@ h2, .h2 {
   color: #484747;
 }
 
+.st0 {
+  fill: #1a1a1a;
+}
+
+.st1 {
+  fill: none;
+  stroke: #ff7033;
+  stroke-width: 17.2795;
+  stroke-miterlimit: 10;
+}
+
 .main-container {
   display: grid;
   grid-template-columns: 70px 1fr;
@@ -10924,7 +10935,7 @@ h2, .h2 {
   content: "";
   height: 30px;
   width: 30px;
-  background-image: url(/src/img/sun.svg);
+  background-image: url("/img/sun.svg");
   background-size: 15px 15px;
   background-repeat: no-repeat;
   background-position: center;
@@ -10943,7 +10954,7 @@ h2, .h2 {
   content: "";
   height: 30px;
   width: 30px;
-  background-image: url(/src/img/moon.png);
+  background-image: url("/img/moon.svg");
   background-size: 15px 15px;
   background-repeat: no-repeat;
   background-position: center;
@@ -11052,6 +11063,18 @@ input:checked + .slider:after {
   z-index: -1;
 }
 
+.modal-registro {
+  background-color: #ffffffa4;
+}
+.modal-registro .modal-content {
+  border-radius: 9px;
+}
+
+@media (max-width: 690px) {
+  .modal-registro {
+    font-size: 0.9rem;
+  }
+}
 .main-perfil-artista {
   width: 100%;
   max-width: 1820px;
@@ -11437,4 +11460,21 @@ body.dark .main-container .reproductor-principal .fixed-menu-movil {
 }
 body.dark .main-container .reproductor-principal .fixed-menu-movil a {
   color: #fff;
+}
+body.dark .main-container .modal-registro {
+  background-color: #0f0f0fb2;
+}
+body.dark .main-container .modal-registro .modal-content {
+  border-radius: 9px;
+  background-color: #262626;
+  color: #fff;
+}
+body.dark .main-container .modal-registro .modal-content .modal-header button {
+  color: #fff;
+}
+body.dark .main-container .modal-registro .modal-content::before {
+  background-color: #1a1a1a;
+}
+body.dark .main-container .modal-registro .modal-content .st0 {
+  fill: white;
 }

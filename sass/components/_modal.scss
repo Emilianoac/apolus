@@ -1,0 +1,14 @@
+.modal-registro {
+    background-color: #ffffffa4;
+
+    .modal-content{
+        border-radius: 9px;
+    }
+}
+
+@media (max-width:690px) {
+    
+    .modal-registro {
+        font-size: 0.9rem;
+    }
+}

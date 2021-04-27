@@ -148,5 +148,29 @@ body.dark{
                 }
             }
         }
+
+        .modal-registro {
+            background-color: #0f0f0fb2;
+
+            .modal-content{
+                border-radius: 9px;
+                background-color: $dark-light;
+                color: $white;
+
+                .modal-header {
+                    button {
+                        color: $white;
+                    }
+                }
+
+                &::before {
+                   background-color:  $dark;
+                }
+
+                .st0{
+                    fill: $light
+                }
+            }
+        }
     }
 }
