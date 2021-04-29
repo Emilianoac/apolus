@@ -29,16 +29,19 @@ const logicaBotones = () => {
         })
     }
 
-    btnSeguir.addEventListener('click', () => {
-        btnSeguir.querySelector('svg').classList.toggle('fa-check')
-        btnSeguir.querySelector('svg').classList.toggle('fa-plus')
-        if (btnSeguir.querySelector('svg').classList.contains('fa-check')) {
-            btnSeguir.querySelector('span').textContent = 'Siguiendo'
-        } else {
-            btnSeguir.querySelector('span').textContent = 'Seguir'
-        }
+    if (btnSeguir) {
+        btnSeguir.addEventListener('click', () => {
+            btnSeguir.querySelector('svg').classList.toggle('fa-check')
+            btnSeguir.querySelector('svg').classList.toggle('fa-plus')
+            if (btnSeguir.querySelector('svg').classList.contains('fa-check')) {
+                btnSeguir.querySelector('span').textContent = 'Siguiendo'
+            } else {
+                btnSeguir.querySelector('span').textContent = 'Seguir'
+            }
+    
+        })
+    }
 
-    })
 }
 
 export default logicaBotones
