@@ -5,7 +5,26 @@
       <%- include('partials/_top-navbar') %> 
       <%- include('partials/_menu_lateral'); %> 
       <main class="main-perfil-artista">
-          
+        <% for(let i = 0; i < 4; i++) {%>
+          <section style="margin-bottom: 4rem;">
+            <h2 class=" mb-4">Escuchados recientemente</h2>
+            <div class="row">
+              <% artistasHome.forEach(function (artista) { %>
+                <div class="col-lg-3 col-6 mt-4 mt-lg-0">
+                  <article class="categoria-musica-card shadow-card">
+                    <a href="/benee">
+                      <div class="img-container">
+                        <img class="img-fluid" src="<%=artista.miniatura %> " alt="miniatura">
+                      </div>
+                      <p class="mb-0"> <%= artista.nombreArtista %> </p>
+                    </a>
+                    <button data-play class="btn btn-play"> <i class="fas fa-play-circle"></i></button>
+                  </article>
+                </div>
+              <% }) %>
+            </div>
+          </section>
+        <% } %>
       </main>
       <%- include('partials/_reproductor-bottom'); %> 
       <div class="modal modal-registro fade" id="iniciarSesion" tabindex="-1" aria-labelledby="iniciarSesion" aria-hidden="true">

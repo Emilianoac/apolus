@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "dev": "nodemon src/index.js",
-    "watch": "sass --watch --no-source-map src/sass/main.scss:src/css/estilos.css"
+    "watch": "sass --watch --no-source-map src/sass/main.scss:src/public/css/estilos.css"
   },
   "repository": {
     "type": "git",
