@@ -10737,7 +10737,7 @@ body {
 h2, .h2 {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #484747;
+  color: #4e34e5;
 }
 
 .st0 {
@@ -10871,6 +10871,7 @@ body.dark h2, body.dark .h2 {
   }
   body .main-container .menu-lateral {
     grid-row: 3;
+    display: none;
   }
   body .main-container .menu-lateral ul {
     margin: 0;
@@ -11116,7 +11117,7 @@ input:checked + .slider:after {
   font-size: 0.94rem;
 }
 .categoria-musica-card p {
-  color: #4e34e5;
+  color: #1a1a1a;
   padding: 1em;
 }
 .categoria-musica-card:hover {
@@ -11137,6 +11138,21 @@ body.dark .categoria-musica-card p {
   color: #fff;
 }
 
+@media (max-width: 650px) {
+  .categoria-musica-card img {
+    height: 90px;
+  }
+  .categoria-musica-card p {
+    font-size: 0.85rem;
+  }
+  .categoria-musica-card .btn-play {
+    font-size: 1.7rem;
+    top: 5px;
+    right: 5px;
+    height: 35px;
+    width: 35px;
+  }
+}
 .modal-registro {
   background-color: #ffffffa4;
 }
@@ -11393,7 +11409,8 @@ body.dark .categoria-musica-card p {
     grid-column: 1/2;
     padding: 1rem;
     overflow-x: hidden;
-    padding-bottom: 11rem;
+    padding-bottom: 7rem;
+    padding-top: 6rem;
   }
   .main-container .main-perfil-artista .container-banner-artista .nombre-artista-banner {
     font-size: 1.5rem;

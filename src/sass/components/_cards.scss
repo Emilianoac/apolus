@@ -24,7 +24,6 @@
     .img-container {
         overflow: hidden;
         position: relative;
-
     }
 
     img {
@@ -49,7 +48,7 @@
     }
 
     p {
-        color: $primary;
+        color: $dark;
         padding: 1em;
     }
 
@@ -77,6 +76,28 @@ body.dark  {
         
         p {
             color: $white;
+        }
+    }
+}
+
+@media(max-width:650px) {
+
+    .categoria-musica-card {
+
+        img {
+            height: 90px;
+        }
+
+        p {
+            font-size: 0.85rem;
+        }
+
+        .btn-play {
+            font-size: 1.7rem;
+            top: 5px;
+            right: 5px;
+            height: 35px;
+            width: 35px;
         }
     }
 }
