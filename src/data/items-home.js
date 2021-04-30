@@ -1,4 +1,4 @@
-const artistasHome = [
+const cancionesRecientes = [
     {
         nombreArtista: "Elliott Smith",
         miniatura: "/img/elliott-01.jpg"
@@ -17,4 +17,4 @@ const artistasHome = [
     }
 ]
 
-module.exports = artistasHome
+module.exports = cancionesRecientes

@@ -151,6 +151,7 @@
 
             .menu-lateral {
                 grid-row: 3;
+                display: none;
     
                 ul {
                     margin: 0;
@@ -169,5 +170,4 @@
             }
         }
     }
-
 }

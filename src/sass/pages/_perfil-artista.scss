@@ -1,5 +1,4 @@
 
-
 .main-perfil-artista{
     width: 100%;
     max-width: 1820px;
@@ -319,7 +318,8 @@
             grid-column: 1/2;
             padding: 1rem;
             overflow-x: hidden;
-            padding-bottom: 11rem;
+            padding-bottom: 7rem;
+            padding-top: 6rem;
 
             .container-banner-artista {
 
@@ -358,7 +358,6 @@
             .bg-circulo {
                 display: none;
             }
-      
         }
 
         .reproductor-principal {
@@ -380,9 +379,6 @@
                     color: $primary;
                 }
             }
-
-
         }
     }
-
 }
