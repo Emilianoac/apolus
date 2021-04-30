@@ -22,3 +22,10 @@ h2 {
     stroke-miterlimit:10;
 }
 
+
+body.dark {
+
+    h2 {
+        color: $white;
+    }
+}

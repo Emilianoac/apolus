@@ -10751,6 +10751,10 @@ h2, .h2 {
   stroke-miterlimit: 10;
 }
 
+body.dark h2, body.dark .h2 {
+  color: #fff;
+}
+
 .main-container {
   display: grid;
   grid-template-columns: 70px 1fr;
@@ -10761,6 +10765,9 @@ h2, .h2 {
   grid-row: 1/2;
   grid-column: 1/4;
   background-color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 8;
 }
 .main-container .top-navbar a {
   color: #484747;
@@ -10821,6 +10828,9 @@ h2, .h2 {
   grid-column: 1/2;
   height: 100%;
   box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.274);
+  position: fixed;
+  width: 70px;
+  padding-top: 3.5rem;
 }
 .main-container .menu-lateral ul {
   list-style-type: none;
@@ -10876,6 +10886,7 @@ h2, .h2 {
   }
 }
 .btn-play {
+  position: relative;
   display: inline-flex;
   height: 50px;
   width: 50px;
@@ -10886,11 +10897,24 @@ h2, .h2 {
   font-size: 2.8rem;
   color: #4e34e5;
   border-radius: 100%;
+  z-index: 2;
 }
 .btn-play svg {
   transition: color 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: box-shadow 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
   border-radius: 50%;
+}
+.btn-play::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+  background-color: white;
 }
 .btn-play:hover svg {
   color: #351acb;
@@ -11050,6 +11074,8 @@ input:checked + .slider:after {
 .shadow-card {
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.39);
   border-radius: 8px;
+  position: relative;
+  background-color: #fff;
 }
 .shadow-card::before {
   content: "";
@@ -11061,6 +11087,54 @@ input:checked + .slider:after {
   height: 100%;
   border-radius: 8px;
   z-index: -1;
+}
+
+.categoria-musica-card {
+  position: relative;
+  transition: 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.categoria-musica-card .img-container {
+  overflow: hidden;
+  position: relative;
+}
+.categoria-musica-card img {
+  object-fit: cover;
+  height: 120px;
+  width: 100%;
+  border-radius: 9px 9px 0px 0px;
+  transition: 0.9s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.categoria-musica-card .btn-play {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 2.5rem;
+}
+.categoria-musica-card a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.94rem;
+}
+.categoria-musica-card p {
+  color: #4e34e5;
+  padding: 1em;
+}
+.categoria-musica-card:hover {
+  box-shadow: 8px 2px 8px rgba(0, 0, 0, 0.377);
+}
+.categoria-musica-card:hover img {
+  transform: scale(1.1);
+  overflow: hidden;
+}
+
+body.dark .shadow-card {
+  background-color: #262626;
+}
+body.dark .shadow-card::before {
+  background-color: #222121;
+}
+body.dark .categoria-musica-card p {
+  color: #fff;
 }
 
 .modal-registro {
@@ -11081,6 +11155,7 @@ input:checked + .slider:after {
   grid-column: 2/4;
   position: relative;
   padding: 2rem 3.4rem;
+  padding-top: 6rem;
   margin: 0 auto;
   z-index: 1;
 }
@@ -11477,4 +11552,5 @@ body.dark .main-container .modal-registro .modal-content::before {
 }
 body.dark .main-container .modal-registro .modal-content .st0 {
   fill: white;
+  color: red;
 }

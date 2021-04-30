@@ -1,6 +1,8 @@
 .shadow-card {
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.39);
     border-radius: 8px;
+    position: relative;
+    background-color: $white;
     
     &::before {
         content: "";
@@ -12,5 +14,69 @@
         height: 100%;
         border-radius: 8px;
         z-index: -1;
+    }
+}
+
+.categoria-musica-card {
+    position: relative;
+    transition: 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+    .img-container {
+        overflow: hidden;
+        position: relative;
+
+    }
+
+    img {
+        object-fit: cover;
+        height: 120px;
+        width: 100%;
+        border-radius: 9px 9px 0px 0px;
+        transition: 0.9s cubic-bezier(0.215, 0.610, 0.355, 1);
+    }
+
+    .btn-play {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 2.5rem;
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 0.94rem;
+    }
+
+    p {
+        color: $primary;
+        padding: 1em;
+    }
+
+    &:hover  {
+        box-shadow: 8px 2px 8px rgba(0, 0, 0, 0.377);
+    }
+
+    &:hover img {
+        transform: scale(1.1);
+        overflow: hidden;
+    }
+}
+
+body.dark  {
+
+    .shadow-card {
+        background-color: $dark-light;
+
+        &::before {
+          background-color: #222121;
+        }
+    }
+
+    .categoria-musica-card {
+        
+        p {
+            color: $white;
+        }
     }
 }
