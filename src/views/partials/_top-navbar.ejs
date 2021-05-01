@@ -1,4 +1,4 @@
-<nav class="top-navbar navbar navbar-expand px-0 px-sm-3 ps-0 shadow">
+<nav class="top-navbar d-block navbar navbar-expand px-0 px-sm-3 ps-0 shadow">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">
         <?xml version="1.0" encoding="utf-8"?>
@@ -40,13 +40,16 @@
         </g>
         </svg>
       </a>
+
       <div class="collapse navbar-collapse ms-4" id="navbarSupportedContent">
+
         <form class="buscador-navbar d-none d-md-flex">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Buscar artista, canción o albúm" aria-label="buscador" aria-describedby="buscador">
             <button class="input-group-text" id="buscardor"><i class="fas fa-search "></i></button>
           </div>
         </form>
+
         <ul class="navbar-nav ms-auto ">
           <li class="nav-item me-3 d-none d-md-block">
             <a class="nav-link active" aria-current="page" href="#!">Iniciar sesión</a>      
@@ -62,5 +65,13 @@
           </li>
         </ul>
       </div>
+    </div>
+    <div class="container-fluid mt-2 mt-lg-0">
+      <form class="buscador-navbar movil d-block d-md-none">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Buscar artista, canción o albúm" aria-label="buscador" aria-describedby="buscador">
+          <button class="input-group-text" id="buscardor"><i class="fas fa-search "></i></button>
+        </div>
+      </form>
     </div>
   </nav>
