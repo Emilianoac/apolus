@@ -10799,6 +10799,9 @@ body.dark h2, body.dark .h2 {
   max-width: 500px;
   width: 100%;
 }
+.top-navbar .buscador-navbar.movil {
+  max-width: 100%;
+}
 
 .menu-lateral {
   grid-column: 1/2;
