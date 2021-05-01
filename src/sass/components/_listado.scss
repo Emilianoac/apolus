@@ -1,0 +1,120 @@
+
+.container-lista-reproduccion{
+    padding: 1.6rem;
+    position: relative;
+    border-radius: 8px;
+    background-color: $light;
+
+    .lista-reproduccion {
+        list-style-type: none;
+        padding: 1em;
+
+        li {
+            display: grid;
+            grid-template-columns: 40px 1fr 1fr 70px 30px;
+            justify-content: space-between;
+            align-items: center; 
+            padding: 0.6em 0em;
+            font-size: 0.90rem;
+            border-bottom: 1px solid $gris-light;
+            column-gap: 10px;
+            padding: 0.8rem;
+            border-radius: 5px;
+            transition: background-color 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+            .miniatura-cancion {
+                border-radius: 7px;
+            }
+            
+            .nombre-artista__lista-reproduccion, .duracion-cancion__lista-reproduccion {
+                text-align: center;
+            }
+
+            .titulo-cancion__lista-reproduccion {
+                font-weight: bold;
+            }
+
+            .favorito_lista-reproduccion {
+                padding: 0;
+                color: $secondary;
+                
+            }
+
+            &:hover {
+                background-color: $gris-light;
+            }
+        }
+    }
+}
+
+
+/// Dark Mode 
+body.dark {
+
+    .lista-reproduccion {
+        background-color: $dark-light;
+        color: $light;
+
+        &::-webkit-scrollbar {
+            background-color:$gris-dark;
+        }
+        
+        &::-webkit-scrollbar-track {
+            background-color:$gris-dark;
+        }
+        
+        &::-webkit-scrollbar-track-piece {
+            background-color:$gris-dark;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background-color: $dark;
+            border-radius: 8px;
+        }
+
+        li {
+            border-bottom-color: $gris-dark;
+
+            &:hover {
+
+                background-color: $dark;
+            }
+        }
+    }
+
+}
+
+
+// Media queries
+@media(min-width:1600px) {
+    .lista-reproduccion {
+        max-height: 340px;
+    }
+}
+
+@media(min-width:1800px) {
+    .lista-reproduccion {
+        max-height: 400px;
+    }
+}
+
+@media(min-width:1920px) {
+    .container-lista-reproduccion .lista-reproduccion {
+        max-height: 420px;
+    }
+}
+
+@media(max-width:650px) {
+    .container-lista-reproduccion  {
+        padding: 1rem;
+
+        .lista-reproduccion {
+            padding: 0.5rem;
+
+            li {
+                font-size: 0.85rem;
+            }
+        }
+        
+    }
+}

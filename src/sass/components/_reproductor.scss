@@ -1,3 +1,7 @@
+:root{
+    --load: 40%;
+}
+
 .reproductor-principal {
     background-color: $white;
     box-shadow: -8px 0px 9px rgba(0, 0, 0, 0.199);
@@ -18,7 +22,7 @@
         position: absolute;
         content: '';
         background-color: dodgerblue;
-        width: 40%;
+        width: var(--load);
         height: 3px;
         z-index: -1;
         top: 0px;
@@ -75,6 +79,53 @@
             align-self: flex-start;
             margin-left: 5px;
             line-height: 1;
+        }
+    }
+}
+
+/// Modo Oscuro
+body.dark {
+
+    .reproductor-principal {
+        background-color: $dark ;
+        color: $light;
+
+        .control-volumen{
+            color: $light;
+        }
+
+        .fixed-menu-movil {
+            border-top: 1px solid $gris-dark;
+            background-color: $dark;
+
+            a {
+                color: $white;
+            }
+        }
+    }
+}
+
+/// Media Queries
+@media(max-width:650px) {
+
+    .reproductor-principal {
+
+        .container-datos-cancion {
+
+            .marcar-favorito {
+                position: absolute;
+                right: 8px;
+                top: 5px;
+                font-size: 0.94rem;
+            }
+
+            .btn-reproducir-movil {
+                position: absolute;
+                right: 70px;
+                padding: 0;
+                font-size: 1.9rem;
+                color: $primary;
+            }
         }
     }
 }

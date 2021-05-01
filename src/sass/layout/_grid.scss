@@ -4,170 +4,229 @@
     grid-template-rows: min-content;
     height: 100%;
 
-    /// Top menu
-    .top-navbar {
-        grid-row: 1/2;
-        grid-column: 1/4;
-        background-color: $light;
-        position: fixed;
-        width: 100%;
-        z-index: 8;
+}
 
-        a {
-            color: $gris-dark;
+/// Top menu
+.top-navbar {
+    grid-row: 1/2;
+    grid-column: 1/4;
+    background-color: $light;
+    position: fixed;
+    width: 100%;
+    z-index: 8;
 
-            &:hover  {
-                color: $primary;
-            }
+    a {
+        color: $gris-dark;
+
+        &:hover  {
+            color: $primary;
+        }
+    }
+    
+    .navbar-brand {
+
+        svg {
+            width: 100px;
+        }
+
+        .st0{
+            fill: $dark;
+        }
+
+        .st1{
+            fill:none;
+            stroke: $secondary;
+            stroke-width:17.2795;
+            stroke-miterlimit:10;
+        }
+
+        .circulo-marca {
+            transition: 0.7s ease-in-out;
+            transform-origin: center;
         }
         
-        .navbar-brand {
-
-            svg {
-                width: 100px;
-            }
-
-            .st0{
-                fill: $dark;
-            }
-
-            .st1{
-                fill:none;
-                stroke: $secondary;
-                stroke-width:17.2795;
-                stroke-miterlimit:10;
-            }
-
-            .circulo-marca {
-                transition: 0.7s ease-in-out;
-                transform-origin: center;
-            }
-            
-            .circulo-marca.girar {
-                transform: rotate(360deg);
-            }
-        }
-
-        .buscador-navbar {
-            max-width: 500px;
-            width: 100%;
-
-            input {
-                border-right: 0;
-                transition: border-color 0s;
-                border: 1px solid darken($gris-light, 8) ;
-                border-right: 0;
-
-                &:active {
-                    box-shadow: unset;
-                }
-
-                &:focus {
-                    box-shadow: unset;
-                    border: 1px solid darken($gris-light, 8) ;
-                    border-right: 0;
-                }
-            }
-
-            button {
-                background-color: unset;
-                border: 1px solid darken($gris-light, 8) ;
-                border-left: 0;
-                transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-
-                &:hover {
-                    color: $primary;
-                }
-            }
-
-            &:focus-within button {
-                color: $primary;
-            }
+        .circulo-marca.girar {
+            transform: rotate(360deg);
         }
     }
 
+    .buscador-navbar {
+        max-width: 500px;
+        width: 100%;
+    }
+}
 
-    /// Sidebar menu
-    .menu-lateral {
-        grid-column: 1/2;
-        height: 100%;
-        box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.274);
-        position: fixed;
-        width: 70px;
-        padding-top: 3.5rem;
+/// Sidebar menu
+.menu-lateral {
+    grid-column: 1/2;
+    height: 100%;
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.274);
+    position: fixed;
+    width: 70px;
+    padding-top: 3.5rem;
 
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-            margin-top: 3rem;
-            text-align: center;
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        margin-top: 3rem;
+        text-align: center;
 
-            li {
-                margin-bottom: 2.1em;
-            }
+        li {
+            margin-bottom: 2.1em;
+        }
 
-            a {
-                font-size: 1.3em;
-                color: #585858;
+        a {
+            font-size: 1.3em;
+            color: #585858;
 
-                &:hover {
-                    opacity: 0.7;
-                }
+            &:hover {
+                opacity: 0.7;
             }
         }
     }
 }
 
-// Media queries
+/// Contenido principal
+.main {
+    width: 100%;
+    max-width: 1820px;
+    grid-column: 2/4;
+    position: relative;
+    padding: 2rem 3.4rem;
+    padding-top: 6rem;
+    margin: 0 auto;
+    z-index: 1;
+}
 
+
+/// Modo Oscuro 
+body.dark {
+    background-color: $dark-light;
+
+    .main-container {
+        background-color: $dark-light;
+    }
+
+    .top-navbar, .menu-lateral {
+        background-color: $dark;
+
+        a {
+            color: darken( $light,  30);
+
+            &:hover {
+                color: $white;
+            }
+        }
+
+    }
+
+    .top-navbar {
+
+        .navbar-brand .st0 {
+
+            fill: $light;
+        }
+
+    }
+
+    .menu-lateral {
+
+        a {
+            color: darken( $light,  30);
+
+            &:hover {
+                color: $white;
+            }
+        }
+
+        .buscador-navbar  {
+            
+            input {
+                border-color: $dark-light;
+
+
+                &:focus-within button {
+                    border-color: $dark-light;
+                }
+
+                &:focus {
+                    box-shadow: unset;
+                    border: 1px solid $dark-light ;
+                    border-right: 0;
+                }
+            }
+
+            button {
+                background-color: $light;
+                border-color: $dark-light;
+            }
+
+        }
+    }
+
+    .main {
+        background-color: $dark-light;
+    }
+}
+
+
+
+// Media queries 
 @media(max-width:998px) {
+    
     body {
         height: auto;
     }
 }
 
 @media(max-width:650px) {
+
     body {
         height: auto;
-
-        .main-container {
-            grid-template-columns: 1fr;
-            height: auto;
-
-            .top-navbar {
-                
-                .navbar-brand {
-                    
-                    svg {
-                        width: 95px;
-                    }
-                }
-
-                .nav-link {
-                    font-size: 0.84rem;
-                    padding: 0.4rem;
-                }
-            }
-
-            .menu-lateral {
-                grid-row: 3;
-                display: none;
+    }
+    .main-container {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
     
-                ul {
-                    margin: 0;
-                    display: flex;
-                    justify-content: space-evenly;
-                    padding: 0.4em;
-
-                    li {
-                        margin-bottom: 0;
-                    }
-
-                    hr {
-                        display: none;
-                    }
-                }
+    .top-navbar {
+        
+        .navbar-brand {
+            
+            svg {
+                width: 95px;
             }
         }
+    
+        .nav-link {
+            font-size: 0.84rem;
+            padding: 0.4rem;
+        }
+    }
+    
+    .menu-lateral {
+        grid-row: 3;
+        display: none;
+    
+        ul {
+            margin: 0;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 0.4em;
+    
+            li {
+                margin-bottom: 0;
+            }
+    
+            hr {
+                display: none;
+            }
+        }
+    }
+    
+    .main {
+        padding: 1rem;
+        padding-top: 4rem;
+        grid-column: 1/2;
     }
 }
