@@ -129,3 +129,10 @@ body.dark {
         }
     }
 }
+
+@media (max-height: 400px) {
+
+    .reproductor-principal {
+        position: relative!important;
+    }
+}

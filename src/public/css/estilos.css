@@ -11148,6 +11148,11 @@ body.dark .reproductor-principal .fixed-menu-movil a {
     color: #4e34e5;
   }
 }
+@media (max-height: 400px) {
+  .reproductor-principal {
+    position: relative !important;
+  }
+}
 .shadow-card {
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.39);
   border-radius: 8px;
