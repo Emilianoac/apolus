@@ -11148,7 +11148,7 @@ body.dark .reproductor-principal .fixed-menu-movil a {
     color: #4e34e5;
   }
 }
-@media (max-height: 400px) {
+@media (max-height: 300px) and (max-width: 650px) {
   .reproductor-principal {
     position: relative !important;
   }
