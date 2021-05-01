@@ -1,14 +1,5 @@
 
 .main-perfil-artista{
-    width: 100%;
-    max-width: 1820px;
-    grid-column: 2/4;
-    position: relative;
-    padding: 2rem 3.4rem;
-    padding-top: 6rem;
-    margin: 0 auto;
-    z-index: 1;
-
 
     .container-banner-artista {
         position: relative;
@@ -78,7 +69,6 @@
         }
     }
 
-
     .reproductor-album {
         display: grid;
         position: relative;
@@ -129,45 +119,10 @@
         }
     }
 
-
-    .container-lista-reproduccion{
-        padding: 1.6rem;
-        position: relative;
-        border-radius: 8px;
-        background-color: $light;
-
-        .lista-reproduccion {
-            list-style-type: none;
-            max-height: 220px;
-            overflow-y: scroll;
-            padding: 1em;
-
-            li {
-                grid-template-columns: 1fr 1fr 70px 30px;
-                display: grid;
-                align-items: center; 
-                justify-content: space-between;
-                border-bottom: 1px solid $gris-light;
-                padding: 0.6em 0em;
-                font-size: 0.90rem;
-                
-                .nombre-artista__lista-reproduccion, .duracion-cancion__lista-reproduccion {
-                    text-align: center;
-                }
-
-                .titulo-cancion__lista-reproduccion {
-                    font-weight: bold;
-                }
-
-                .favorito_lista-reproduccion {
-                    padding: 0;
-                    color: $secondary;
-                    
-                }
-            }
-        }
+    .lista-reproduccion {
+        max-height: 220px;
+        overflow-y: scroll;
     }
-
 
     .albumes {
         margin-top: 0.9rem;
@@ -239,146 +194,132 @@
     }
 }
 
+/// Modo oscuro
+body.dark {
+
+    .container-banner-artista {
+
+        &::before {
+            background-color: $dark-med;
+        }
+    }
+
+    .reproductor-album {
+        background-color: $dark-light;
+        color: $light;
+
+    }
+
+    .titulo-seccion {
+        color: $light;
+    }
+
+    .albumes {
+        background-color: $dark-light;
+
+        .album {
+            color: $light;
+
+            a {
+                color: $light;
+            }
+        }
+
+        &::before {
+            background-color: $dark-med;
+
+        }
+    }
+
+    .bg-circulo {
+        background-color: darken($dark-med,  1);
+    }
+}
+
 // Media queries
 @media(min-width:1600px) {
-    .main-container {
+    
+    .main-perfil-artista {
 
-        .main-perfil-artista {
-
-            .container-banner-artista {
-                img {
-                    height: 280px;
-                }
+        .container-banner-artista {
+            img {
+                height: 280px;
             }
+        }
 
-            .lista-reproduccion {
-                max-height: 340px;
-            }
-
-            .bg-circulo {
-                width: 400px;
-                height: 400px;
-            }
+        .bg-circulo {
+            width: 400px;
+            height: 400px;
         }
     }
 }
 
 @media(min-width:1800px) {
-    .main-container {
 
-        .main-perfil-artista {
-            overflow-y: visible;
+    .main-perfil-artista {
+        overflow-y: visible;
 
-            .container-banner-artista {
-                img {
-                    height: 280px;
-                }
+        .container-banner-artista {
+            img {
+                height: 280px;
             }
+        }
 
-            .lista-reproduccion {
-                max-height: 400px;
-            }
-
-            .bg-circulo {
-                width: 400px;
-                height: 400px;
-            }
+        .bg-circulo {
+            width: 400px;
+            height: 400px;
         }
     }
 }
 
 @media(min-width:1920px) {
-    .main-container {
 
-        .main-perfil-artista {
+    .main-perfil-artista {
 
-            .albumes .album img {
-                height: 170px;
-            }
+        .albumes .album img {
+            height: 170px;
+        }
 
-            .container-lista-reproduccion .lista-reproduccion {
-                max-height: 420px;
-            }
-
-            .bg-circulo {
-                width: 500px;
-                height: 500px;
-                right: -140px;
-            }
+        .bg-circulo {
+            width: 500px;
+            height: 500px;
+            right: -140px;
         }
     }
 }
 
-
-
 @media(max-width:650px) {
-    .main-container {
- 
-        .main-perfil-artista {
-            grid-column: 1/2;
-            padding: 1rem;
-            overflow-x: hidden;
-            padding-bottom: 7rem;
-            padding-top: 6rem;
 
-            .container-banner-artista {
+    .main-perfil-artista {
+        grid-column: 1/2;
+        padding: 1rem;
+        overflow-x: hidden;
+        padding-bottom: 10rem;
+        padding-top: 5rem;
 
-                .nombre-artista-banner {
-                    font-size: 1.5rem;
-                }
+        .container-banner-artista {
 
-                button {
-                    font-size: 0.9rem;
-                    top: 10px;
-                }
+            .nombre-artista-banner {
+                font-size: 1.5rem;
             }
 
-            .container-lista-reproduccion  {
-                padding: 1rem;
-
-                .lista-reproduccion {
-                    padding: 0.5rem;
-
-                    li {
-                        font-size: 0.85rem;
-                    }
-                }
-                
-            }
-
-            .albumes {
-                grid-template-columns: repeat(3, 1fr);
-                padding: 0.6em;
-
-                figcaption {
-                    font-size: 0.8rem;
-                }
-            }
-
-            .bg-circulo {
-                display: none;
+            button {
+                font-size: 0.9rem;
+                top: 10px;
             }
         }
 
-        .reproductor-principal {
+        .albumes {
+            grid-template-columns: repeat(3, 1fr);
+            padding: 0.6em;
 
-            .container-datos-cancion {
-
-                .marcar-favorito {
-                    position: absolute;
-                    right: 8px;
-                    top: 5px;
-                    font-size: 0.94rem;
-                }
-
-                .btn-reproducir-movil {
-                    position: absolute;
-                    right: 70px;
-                    padding: 0;
-                    font-size: 1.9rem;
-                    color: $primary;
-                }
+            figcaption {
+                font-size: 0.8rem;
             }
+        }
+
+        .bg-circulo {
+            display: none;
         }
     }
 }

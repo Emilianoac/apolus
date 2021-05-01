@@ -1,0 +1,38 @@
+.main-busqueda {
+    padding-bottom: 9rem;
+    
+    h1 {
+        color: white;
+        font-weight: bold;
+    }
+
+    .lista-reproduccion {
+        height: 350px;
+        overflow-y: scroll;
+    }
+}
+
+
+@media(max-width:650px) {
+
+    .main-busqueda {
+        padding-bottom: 9rem;
+
+        .container-lista-reproduccion  {
+            padding: 0.5rem;
+    
+            .lista-reproduccion {
+                padding: 0.5rem;
+    
+                li {
+                    font-size: 0.8rem;
+                    grid-template-columns: 30px 1fr 1fr;
+
+                    .favorito_lista-reproduccion, .duracion-cancion__lista-reproduccion{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

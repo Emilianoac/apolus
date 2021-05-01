@@ -1,0 +1,61 @@
+.input-group {
+    
+    input {
+        border-right: 0;
+        transition: border-color 0s;
+        border: 1px solid darken($gris-light, 8) ;
+        border-right: 0;
+    
+        &:active {
+            box-shadow: unset;
+        }
+    
+        &:focus {
+            box-shadow: unset;
+            border: 1px solid darken($gris-light, 8) ;
+            border-right: 0;
+        }
+    }
+    
+    button {
+        background-color: unset;
+        border: 1px solid darken($gris-light, 8) ;
+        border-left: 0;
+        transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    
+        &:hover {
+            color: $primary;
+        }
+    }
+    
+    &:focus-within button {
+        color: $primary;
+    }
+}
+
+body.dark {
+
+    .buscador-navbar  {
+                
+        input {
+            border-color: $dark-light;
+
+
+            &:focus-within button {
+                border-color: $dark-light;
+            }
+
+            &:focus {
+                box-shadow: unset;
+                border: 1px solid $dark-light ;
+                border-right: 0;
+            }
+        }
+
+        button {
+            background-color: $light;
+            border-color: $dark-light;
+        }
+
+    }
+}
