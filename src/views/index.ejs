@@ -6,7 +6,8 @@
       <%- include('partials/_menu_lateral'); %> 
       <main class="main main-perfil-artista">
 
-        <section style="margin-bottom: 4rem;">
+        <%#--- Escuchados recientemente ----%>
+        <section class="mt-4">
           <h2 class="mb-0 mb-lg-4">Escuchados recientemente</h2>
           <div class="row">
             <% recientes.forEach(function (artista) { %>
@@ -16,7 +17,7 @@
                     <div class="img-container">
                       <img class="img-fluid" src="<%=artista.miniatura %> " alt="miniatura">
                     </div>
-                    <p class="mb-0"> <%= artista.nombreArtista %> </p>
+                    <p class="titulo-resultado mb-0"> <%= artista.nombreArtista %> </p>
                   </a>
                   <button data-play class="btn btn-play"> <i class="fas fa-play-circle"></i></button>
                 </article>
@@ -25,7 +26,14 @@
           </div>
         </section>
 
-        <section style="margin-bottom: 4rem;">
+        <div class="row">
+          <div class="col-lg-12">
+            <hr class="separador">
+          </div>
+        </div>
+
+        <%#--- Mis listas de reproduccion ----%>
+        <section>
           <h2 class="mb-0 mb-lg-4">Mis listas de reprodución</h2>
           <div class="row">
             <% recientes.forEach(function (artista) { %>
@@ -35,7 +43,7 @@
                     <div class="img-container">
                       <img class="img-fluid" src="<%=artista.miniatura %> " alt="miniatura">
                     </div>
-                    <p class="mb-0"> <%= artista.nombreArtista %> </p>
+                    <p class="titulo-resultado mb-0"> <%= artista.nombreArtista %> </p>
                   </a>
                   <button data-play class="btn btn-play"> <i class="fas fa-play-circle"></i></button>
                 </article>
@@ -44,6 +52,13 @@
           </div>
         </section>
 
+        <div class="row">
+          <div class="col-lg-12">
+            <hr class="separador">
+          </div>
+        </div>
+        
+        <%#--- Recomendados----%>
         <section style="margin-bottom: 4rem;">
           <h2 class=" mb-0 mb-lg-4">Recomendados</h2>
           <div class="row">
@@ -54,7 +69,7 @@
                     <div class="img-container">
                       <img class="img-fluid" src="<%=artista.miniatura %> " alt="miniatura">
                     </div>
-                    <p class="mb-0"> <%= artista.nombreArtista %> </p>
+                    <p class="titulo-resultado mb-0"> <%= artista.nombreArtista %> </p>
                   </a>
                   <button data-play class="btn btn-play"> <i class="fas fa-play-circle"></i></button>
                 </article>

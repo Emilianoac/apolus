@@ -1,14 +1,27 @@
 .main-busqueda {
     padding-bottom: 9rem;
-    
-    h1 {
-        color: white;
-        font-weight: bold;
+
+    h2 {
+        color: $dark-light;
+        border-left: 5px solid $secondary;
+        line-height: 0.85;
+        padding-left: 10px;
     }
 
     .lista-reproduccion {
-        height: 350px;
-        overflow-y: scroll;
+        height: auto;
+        overflow: auto;
+    }
+}
+
+body.dark {
+
+    .main-busqueda {
+
+        h1 {
+            color: $light;
+        }
+
     }
 }
 

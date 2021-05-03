@@ -15,52 +15,12 @@ import modoOscuro from './modulos/modo_oscuro.js'
 //     });
 // }
 
-
 logicaBotones()
 modoOscuro()
 
-const root = document.querySelector(":root");
-
-let width  = 0;
-
-let intervalo;
-
-let btnFavoritos = document.querySelectorAll('[data-favorito=""]')
 
 
 
-
-
-for (const iterator of btnFavoritos) {
-    iterator.addEventListener('click', home)
-}
-
-function home ()  {
-    intervalo = setInterval(() => {
-        root.style.setProperty("--load", `${width}px`)
-        width ++
-        console.log(width)
-        if (width > window.innerWidth) {
-            clearInterval(intervalo)
-            console.log(':)')
-            console.log(window.innerWidth)
-    
-        } 
-    },100);
- 
-}
-
-
-
-
-
-
-
-
-console.log(width)
-
-
-console.log(window.innerWidth)
 
 
 
