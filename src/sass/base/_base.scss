@@ -47,3 +47,11 @@ body.dark {
         color: $white;
     }
 }
+
+@media(max-width:650px) {
+
+    h1 {
+        font-size: 1.7rem;
+        margin-bottom: 0;
+    }
+}

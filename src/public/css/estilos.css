@@ -10775,6 +10775,12 @@ body.dark h2, body.dark .h2 {
   color: #fff;
 }
 
+@media (max-width: 650px) {
+  h1, .h1 {
+    font-size: 1.7rem;
+    margin-bottom: 0;
+  }
+}
 .main-container {
   display: grid;
   grid-template-columns: 70px 1fr;
@@ -10944,7 +10950,7 @@ body.dark .main {
 
   .main {
     padding: 1rem;
-    padding-top: 4rem;
+    padding-top: 7.8rem;
     grid-column: 1/2;
   }
 }
