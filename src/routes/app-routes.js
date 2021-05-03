@@ -16,8 +16,8 @@ router.get('/buscar',(req, res) => {
     res.render('buscar', {recientes, busquedasRecientes, canciones})
 })
 
-router.get('/favoritos',(req, res) => {
-    res.render('favoritos', {canciones})
+router.get('/favoritas',(req, res) => {
+    res.render('favoritas', {canciones})
 })
 
 router.get('/listas-reproduccion',(req, res) => {
