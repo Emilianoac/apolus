@@ -1,8 +1,15 @@
 
 const logicaBotones = () => {
+    const root = document.querySelector(":root");
+    const btnPlay = document.querySelectorAll('[data-play=""]')
+    const linksMenuLateral = document.querySelectorAll('[data-link-menu=""]')
     let btnReproductor = document.querySelectorAll('[data-play=""]')
     let btnFavorito = document.querySelectorAll('[data-favorito=""]')
     let btnSeguir = document.querySelector('#btn-seguir')
+    let width = 0;
+    let click = 0;
+    let intervalo;
+    let current ;
 
     for (let btn of btnReproductor) {
         btn.addEventListener('click', () => {
@@ -40,6 +47,31 @@ const logicaBotones = () => {
             }
     
         })
+    }
+
+    for (const btn of btnPlay) {
+        btn.addEventListener('click', () => {
+            if (click < 1) {
+                intervalo = setInterval(() => {
+                    root.style.setProperty("--load", `${width}px`)
+                    width ++
+                    if (width > window.innerWidth) {
+                        clearInterval(intervalo)
+                    } 
+                },100);
+            } else {
+                clearInterval(intervalo)
+                click = -1
+            }
+            click ++
+        })
+    }
+
+    for (const linksMenu of linksMenuLateral) {
+        if (linksMenu.href === document.URL) {
+            current = linksMenu
+            current.style.color = "#ff7033"
+        }
     }
 
 }

@@ -7,47 +7,16 @@
 
       <%- include('partials/_menu_lateral'); %> 
 
-      <main class="main main-busqueda">
-
-        <div class="row mb-4">
+      <main class="main main-busqueda main-favoritos">
+        <div class="row">
           <div class="col-lg-12">
-              <h1>Busqueda</h1>     
+              <h1>Favoritos</h1>     
           </div>
         </div>
 
-       <%#--- Busquedas ----%>
-        <div class="row">
-          <section>
-              <h2 class=" mb-lg-3 mb-0">Busquedas recientes</h2>
-              <div class="row">
-                <% busquedasRecientes.forEach(function (artista) { %>
-                  <div class="col-lg-3 col-6 mt-4 mt-lg-0">
-                    <article class="categoria-musica-card shadow-card">
-                      <a href="/perfil-artista">
-                        <div class="img-container">
-                          <img class="img-fluid" src="<%=artista.miniatura %> " alt="miniatura">
-                        </div>
-                        <p class="titulo-resultado mb-0"> <%= artista.nombre %> </p>
-                        <p class="tipo-resultado"><%= artista.tipo%> </p>
-                      </a>
-                      <button data-play class="btn btn-play"> <i class="fas fa-play-circle"></i></button>
-                    </article>
-                  </div>
-                <% }) %>
-              </div>
-            </section>
-        </div>
-
+        <%#--- favoritos ----%>
         <div class="row">
           <div class="col-lg-12">
-            <hr class="separador">
-          </div>
-        </div>
-
-        <%#--- Canciones ----%>
-        <div class="row">
-          <div class="col-lg-12">
-            <h2 class=" mb-3">Canciones</h2>
             <div class="container-lista-reproduccion shadow-card">
               <ul class="lista-reproduccion"> 
                 <li>
@@ -63,70 +32,14 @@
                     <div class="titulo-cancion__lista-reproduccion"><%= canciones[i].nombreCancion %> </div>
                     <div class="nombre-artista__lista-reproduccion"><%= canciones[i].nombreArtista %> </div>
                     <div class="duracion-cancion__lista-reproduccion"><%=  canciones[i].duracionCancion%></div>
-                    <button data-favorito="" class="favorito_lista-reproduccion btn" title="Marcar como favorito"><i class="far fa-heart"></i></button>
+                    <button data-favorito="" class="favorito_lista-reproduccion btn" title="Marcar como favorito"><i class="fas fa-heart"></i></button>
                   </li>
                 <% } %>
+                
               </ul>
             </div>     
           </div>
         </div>
-
-        <div class="row">
-          <div class="col-lg-12">
-            <hr class="separador">
-          </div>
-        </div>
-
-        <%#--- Artistas ----%>
-        <div class="row">
-          <section>
-              <h2 class=" mb-lg-3 mb-0">Artistas</h2>
-              <div class="row">
-                <% recientes.forEach(function (artista) { %>
-                  <div class="col-lg-3 col-6 mt-4 mt-lg-0">
-                    <article class="categoria-musica-card shadow-card">
-                      <a href="/perfil-artista">
-                        <div class="img-container">
-                          <img class="img-fluid" src="<%=artista.miniatura %> " alt="miniatura">
-                        </div>
-                        <p class="titulo-resultado mb-0"> <%= artista.nombreArtista %> </p>
-                      </a>
-                      <button data-play class="btn btn-play"> <i class="fas fa-play-circle"></i></button>
-                    </article>
-                  </div>
-                <% }) %>
-              </div>
-            </section>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-12">
-            <hr class="separador">
-          </div>
-        </div>
-
-        <%#--- Album ----%>
-        <div class="row">
-          <section>
-              <h2 class=" mb-lg-3 mb-0">Albumes</h2>
-              <div class="row">
-                <% recientes.forEach(function (artista) { %>
-                  <div class="col-lg-3 col-6 mt-4 mt-lg-0">
-                    <article class="categoria-musica-card shadow-card">
-                      <a href="/perfil-artista">
-                        <div class="img-container">
-                          <img class="img-fluid" src="<%=artista.miniatura %> " alt="miniatura">
-                        </div>
-                        <p class="titulo-resultado mb-0"> <%= artista.nombreArtista %> </p>
-                      </a>
-                      <button data-play class="btn btn-play"> <i class="fas fa-play-circle"></i></button>
-                    </article>
-                  </div>
-                <% }) %>
-              </div>
-            </section>
-        </div>
-
       </main>
 
       <template id="item-lista-reproduccion">

@@ -20,10 +20,36 @@
 .categoria-musica-card {
     position: relative;
     transition: 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
+    padding-bottom: 1em;
+    
+    .titulo-resultado,.tipo-resultado {
+        margin: 0;
+    }
+
+    .titulo-resultado {
+        color: $dark;
+        padding: 1em;
+        padding-bottom: 0;
+    }
+
+    .tipo-resultado {
+        color: $gris-dark;
+        font-weight: normal;
+        padding: 1em;
+        padding-top: 0.5em;
+        padding-bottom: 0;
+        font-size: 0.85rem;
+    }
 
     .img-container {
         overflow: hidden;
         position: relative;
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.93rem;
     }
 
     img {
@@ -41,16 +67,7 @@
         font-size: 2.5rem;
     }
 
-    a {
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 0.94rem;
-    }
 
-    p {
-        color: $dark;
-        padding: 1em;
-    }
 
     &:hover  {
         box-shadow: 8px 2px 8px rgba(0, 0, 0, 0.377);
@@ -76,6 +93,10 @@ body.dark  {
         
         p {
             color: $white;
+        }
+
+        .tipo-resultado {
+            color: lighten($gris-med, 5)
         }
     }
 }
