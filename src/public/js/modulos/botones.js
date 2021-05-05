@@ -3,6 +3,9 @@ const logicaBotones = () => {
     const root = document.querySelector(":root");
     const btnPlay = document.querySelectorAll('[data-play=""]')
     const linksMenuLateral = document.querySelectorAll('[data-link-menu=""]')
+    const btnOffcanvas = document.querySelector('#desplegar-offcanvas')
+    const btnCerrarOffcanvas = document.querySelector('#cerrar-offcanvas')
+    const menuOffcanvas = document.querySelector('.menu-offcanvas')
     let btnReproductor = document.querySelectorAll('[data-play=""]')
     let btnFavorito = document.querySelectorAll('[data-favorito=""]')
     let btnSeguir = document.querySelector('#btn-seguir')
@@ -10,6 +13,14 @@ const logicaBotones = () => {
     let click = 0;
     let intervalo;
     let current ;
+
+    btnOffcanvas.addEventListener('click', () => {
+        menuOffcanvas.classList.add('desplegar')
+    })
+
+    btnCerrarOffcanvas.addEventListener('click', () => {
+        menuOffcanvas.classList.remove('desplegar')
+    })
 
     for (let btn of btnReproductor) {
         btn.addEventListener('click', () => {

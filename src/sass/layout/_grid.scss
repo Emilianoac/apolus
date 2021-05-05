@@ -3,6 +3,7 @@
     grid-template-columns: 70px 1fr;
     grid-template-rows: min-content;
     height: 100%;
+    position: relative;
 
 }
 
@@ -47,6 +48,14 @@
         
         .circulo-marca.girar {
             transform: rotate(360deg);
+        }
+    }
+
+    .navbar-toggler {
+        color: $dark-light;
+        span {
+            font-weight: 600;
+            font-size: 0.95rem;
         }
     }
 
@@ -134,10 +143,24 @@ body.dark {
     .top-navbar {
 
         .navbar-brand .st0 {
-
             fill: $light;
         }
 
+        .navbar-toggler {
+            color: $light;
+
+            &:focus {
+                box-shadow: unset;
+            }
+        }
+    }
+
+    .menu-offcanvas {
+        background-color: $dark;
+
+        #cerrar-offcanvas {
+            color: $light;
+        }
     }
 
     .menu-lateral {
@@ -193,7 +216,7 @@ body.dark {
      }
  }
 
-@media(max-width:998px) {
+@media(max-width:991px) {
     
     body {
         height: auto;
@@ -218,6 +241,35 @@ body.dark {
             padding: 0.4rem;
         }
 
+    }
+
+    .menu-offcanvas {
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 300px;
+        width: 100%;
+        background-color: $white;
+        height: 100vh;
+        z-index: 99;
+        padding: 1rem;
+        transform: translateX(100vh);
+        transition: transform 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+        .cambiar-tema-color {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+
+        ul {
+            padding-top: 1rem;
+            display: grid;
+        }
+    }
+    
+    .menu-offcanvas.desplegar {
+        transform: translateX(0%);
     }
     
     .menu-lateral {
