@@ -2,10 +2,10 @@ const {Router}  = require('express')
 const router = Router()
 const data = require('../data/items-home.js')
 
-const {canciones, recientes, busquedasRecientes}  = data
+const {canciones, recientes, busquedasRecientes, listasReproduccion}  = data
 
 router.get('/',(req, res) => {
-    res.render('index', {recientes})
+    res.render('index', {recientes, listasReproduccion})
 })
 
 router.get('/perfil-artista',(req, res) => {
@@ -22,6 +22,10 @@ router.get('/favoritas',(req, res) => {
 
 router.get('/listas-reproduccion',(req, res) => {
     res.render('listas-reproduccion', {canciones,  busquedasRecientes})
+})
+
+router.get('/amigos',(req, res) => {
+    res.render('amigos', {canciones,  busquedasRecientes})
 })
 
 module.exports = router

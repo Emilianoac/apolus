@@ -4,14 +4,12 @@
     <div class="main-container">
 
       <%- include('partials/_top-navbar') %>
-
       <%- include('partials/_menu_lateral'); %> 
 
       <main class="main main-busqueda">
-
         <div class="row mb-4">
           <div class="col-lg-12">
-              <h1>Listas de reproducción</h1>     
+              <h1>Amigos</h1>     
           </div>
         </div>
 
@@ -21,45 +19,20 @@
               <div class="row">
                 <% busquedasRecientes.forEach(function (artista) { %>
                   <div class="col-lg-3 col-6 mt-4 mt-lg-0">
-                    <article class="categoria-musica-card shadow-card">
+                    <article class="amigos-card categoria-musica-card shadow-card">
                       <a href="/perfil-artista">
                         <div class="img-container">
-                          <img class="img-fluid" src="<%=artista.miniatura %> " alt="miniatura">
+                          <img class="img-fluid" src="/img/amigo-1.jpg" alt="miniatura">
                         </div>
                         <p class="titulo-resultado mb-0"> <%= artista.nombre %> </p>
-                        <p class="tipo-resultado"><%= artista.tipo%> </p>
+                        <p class="actividad"> <i class="fas fa-music"></i></p>
                       </a>
-                      <button data-play class="btn btn-play"> <i class="fas fa-play-circle"></i></button>
                     </article>
                   </div>
                 <% }) %>
               </div>
             </section>
         </div>
-
-        <%#--- Busquedas ----%>
-        <div class="row mb-0 mb-lg-5">
-          <section>
-              <div class="row">
-                <% busquedasRecientes.forEach(function (artista) { %>
-                  <div class="col-lg-3 col-6 mt-4 mt-lg-0">
-                    <article class="categoria-musica-card shadow-card">
-                      <a href="/perfil-artista">
-                        <div class="img-container">
-                          <img class="img-fluid" src="<%=artista.miniatura %> " alt="miniatura">
-                        </div>
-                        <p class="titulo-resultado mb-0"> <%= artista.nombre %> </p>
-                        <p class="tipo-resultado"><%= artista.tipo%> </p>
-                      </a>
-                      <button data-play class="btn btn-play"> <i class="fas fa-play-circle"></i></button>
-                    </article>
-                  </div>
-                <% }) %>
-              </div>
-            </section>
-        </div>
-
-
       </main>
 
       <template id="item-lista-reproduccion">
@@ -72,8 +45,9 @@
       </template>
 
       <%- include('partials/_reproductor-bottom'); %> 
-      
+
       <%- include('partials/_modal-registrarse'); %> 
       <%- include('partials/_modal-ajustes'); %> 
+      
     </div>
 <%- include('partials/_footer.ejs') %> 

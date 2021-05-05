@@ -145,5 +145,21 @@ const canciones = [
     },
 ]
 
+const listasReproduccion = [
+    {
+        miniatura: "/img/lista-1.jpg",
+        nombre: "80s Tokio nostalgia",
+    },
+    {
+        miniatura: "/img/lista-1.jpg",
+        nombre: "80s Tokio nostalgia",
+    },
+    {
+        miniatura: "/img/lista-1.jpg",
+        nombre: "80s Tokio nostalgia",
+    }
 
-module.exports = {canciones,  recientes, busquedasRecientes} 
+]
+
+
+module.exports = {canciones,  recientes, busquedasRecientes, listasReproduccion} 
