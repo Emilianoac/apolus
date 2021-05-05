@@ -16,9 +16,16 @@ const logicaBotones = () => {
 
     btnOffcanvas.addEventListener('click', () => {
         menuOffcanvas.classList.add('desplegar')
+        document.querySelector('.overlay').classList.add('mostrar')
     })
 
     btnCerrarOffcanvas.addEventListener('click', () => {
+        menuOffcanvas.classList.remove('desplegar')
+        document.querySelector('.overlay').classList.remove('mostrar')
+    })
+
+    document.querySelector('.overlay').addEventListener('click', () => {
+        document.querySelector('.overlay').classList.remove('mostrar')
         menuOffcanvas.classList.remove('desplegar')
     })
 

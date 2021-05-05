@@ -271,6 +271,22 @@ body.dark {
     .menu-offcanvas.desplegar {
         transform: translateX(0%);
     }
+
+    .overlay {
+        display: none;
+    }
+
+    .overlay.mostrar {
+        display: block;
+        position: absolute;
+        background: #202020e3;
+        height: 100vh;
+        width: 100%;
+        z-index: 98;
+        right: 0;
+        left: 0;
+        top: 0;
+    }
     
     .menu-lateral {
         grid-row: 3;
