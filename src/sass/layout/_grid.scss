@@ -79,9 +79,12 @@
             margin-bottom: 2.1em;
         }
 
-        a {
+        .item-menu-lateral, a {
             font-size: 1.3em;
             color: #585858;
+            border: 0;
+            background-color: transparent;
+            padding: 0;
 
             &:hover {
                 opacity: 0.7;
@@ -114,12 +117,16 @@ body.dark {
     .top-navbar, .menu-lateral {
         background-color: $dark;
 
-        a {
+        a, .item-menu-lateral {
             color: darken( $light,  30);
 
             &:hover {
                 color: $white;
             }
+        }
+
+        hr {
+            background-color: darken( $light,  30);
         }
 
     }
@@ -135,7 +142,7 @@ body.dark {
 
     .menu-lateral {
 
-        a {
+        a, .item-menu-lateral {
             color: darken( $light,  30);
 
             &:hover {

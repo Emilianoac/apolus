@@ -58,14 +58,14 @@
             display: grid;
             align-content: flex-start;
 
-            h4 {
-                margin: 0;
-                font-size: 1rem;
-                font-weight: bold;
+            p {
+                font-size: 0.95rem;
+                font-weight: 700;
+                margin-bottom: 0;
             }
 
             span {
-                font-size: 0.9rem;
+                font-size: 0.8rem;
                 line-height: 1;
             }
         }

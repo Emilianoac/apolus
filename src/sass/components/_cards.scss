@@ -79,6 +79,26 @@
     }
 }
 
+.amigos-card {
+    padding-top: 1em;
+
+    img {
+        height: 90px;
+        width: 90px;
+        border-radius: 50%;
+        display: block;
+        margin: auto;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    &:hover img {
+        transform: unset;
+    }
+}
+
 body.dark  {
 
     .shadow-card {
@@ -97,6 +117,15 @@ body.dark  {
 
         .tipo-resultado {
             color: lighten($gris-med, 5)
+        }
+    }
+}
+
+
+@media(min-width:1600px) {
+    .categoria-musica-card {
+        img {
+            height: 160px;
         }
     }
 }
