@@ -15,9 +15,9 @@
             justify-content: space-between;
             align-items: center; 
             padding: 0.6em 0em;
-            font-size: 0.90rem;
+            font-size: 0.84rem;
             border-bottom: 1px solid $gris-light;
-            column-gap: 10px;
+            column-gap: 25px;
             padding: 0.8rem;
             transition: background-color 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
 
@@ -25,12 +25,18 @@
                 border-radius: 7px;
             }
             
-            .nombre-artista__lista-reproduccion, .duracion-cancion__lista-reproduccion {
-                text-align: center;
-            }
-
             .titulo-cancion__lista-reproduccion {
                 font-weight: 600;
+            }
+
+            .titulo-cancion__lista-reproduccion, .nombre-artista__lista-reproduccion  {
+                white-space: nowrap;
+                text-overflow:ellipsis;
+                overflow: hidden;
+            }
+
+            .duracion-cancion__lista-reproduccion {
+                text-align: center;
             }
 
             .favorito_lista-reproduccion {
