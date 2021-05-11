@@ -15,6 +15,10 @@
     position: fixed;
     width: 100%;
     z-index: 8;
+    
+    .nav-link {
+        font-size: 0.94rem;
+    }
 
     a {
         color: $gris-dark;
@@ -23,6 +27,7 @@
             color: $primary;
         }
     }
+
     
     .navbar-brand {
 

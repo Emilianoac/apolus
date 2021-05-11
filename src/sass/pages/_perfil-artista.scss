@@ -19,13 +19,14 @@
 
         .nombre-artista-banner {
             color: $light;
-            font-weight: bolder;
-            font-size: 2.8rem;
+            font-weight: 700;
+            font-size: 2.4rem;
             top: 10px;
             left: 20px;
             border-bottom: 5px solid $secondary ;
-            line-height: 1;
+            line-height: 1.2;
             letter-spacing: 2px;
+            margin-bottom: 0;
         }
 
 
@@ -57,7 +58,7 @@
         }
 
         &::after {
-            background: linear-gradient(to bottom, #240b3698, #c3143200);
+            background: linear-gradient(to bottom, #240b36d8, #c3143200);
             position: absolute;
             width: 100%;
             height: 100%;
@@ -73,7 +74,7 @@
         display: grid;
         position: relative;
         grid-template-columns: 65px 1fr 130px;
-        grid-gap: 10px;
+        grid-column-gap: 10px;
         background-color: $light;
         border-radius: 8px;
         align-items: center;
@@ -92,13 +93,13 @@
             height: 100%;
             
             .titulo__reproductor-album {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
                 font-weight: bold;
                 margin-bottom: 0;
             }
 
             .nombre-artista__reproductor-album {
-                font-size: 0.96rem;
+                font-size: 0.9rem;
                 margin-bottom: 0;
             }
 
@@ -120,8 +121,20 @@
     }
 
     .lista-reproduccion {
-        max-height: 220px;
+        max-height: 230px;
         overflow-y: scroll;
+
+        li {
+            display: grid;
+            grid-template-columns: 1fr 1fr 70px 30px;
+
+            &:first-of-type {
+
+                .titulo-cancion__lista-reproduccion {
+                    grid-column: 1/2;
+                }
+            }
+        }
     }
 
     .albumes {
@@ -163,6 +176,9 @@
             figcaption {
                 margin-top: 0.5rem;
                 transition: opacity 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+                white-space: nowrap;
+                text-overflow:ellipsis;
+                overflow: hidden;
             }
 
             time {
@@ -242,9 +258,18 @@ body.dark {
     .main-perfil-artista {
 
         .container-banner-artista {
-            img {
-                height: 280px;
+
+            .img-artista {
+                height: 240px;
             }
+        }
+
+        .lista-reproduccion {
+            max-height: 340px;
+        }
+
+        .albumes .album img {
+            height: 120px;
         }
 
         .bg-circulo {
@@ -260,9 +285,18 @@ body.dark {
         overflow-y: visible;
 
         .container-banner-artista {
-            img {
-                height: 280px;
+
+            .img-artista {
+                height: 240px;
             }
+        }
+
+        .lista-reproduccion {
+            max-height: 370px;
+        }
+
+        .albumes .album img {
+            height: 150px;
         }
 
         .bg-circulo {
@@ -275,10 +309,6 @@ body.dark {
 @media(min-width:1920px) {
 
     .main-perfil-artista {
-
-        .albumes .album img {
-            height: 170px;
-        }
 
         .bg-circulo {
             width: 500px;

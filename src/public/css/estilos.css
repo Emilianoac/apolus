@@ -10805,6 +10805,9 @@ body.dark h2, body.dark .h2, body.dark h4, body.dark .h4 {
   width: 100%;
   z-index: 8;
 }
+.top-navbar .nav-link {
+  font-size: 0.94rem;
+}
 .top-navbar a {
   color: #484747;
 }
@@ -11501,20 +11504,25 @@ body.dark .buscador-navbar button {
   justify-content: space-between;
   align-items: center;
   padding: 0.6em 0em;
-  font-size: 0.9rem;
+  font-size: 0.84rem;
   border-bottom: 1px solid #e6e6e6;
-  column-gap: 10px;
+  column-gap: 25px;
   padding: 0.8rem;
   transition: background-color 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .container-lista-reproduccion .lista-reproduccion li .miniatura-cancion {
   border-radius: 7px;
 }
-.container-lista-reproduccion .lista-reproduccion li .nombre-artista__lista-reproduccion, .container-lista-reproduccion .lista-reproduccion li .duracion-cancion__lista-reproduccion {
-  text-align: center;
-}
 .container-lista-reproduccion .lista-reproduccion li .titulo-cancion__lista-reproduccion {
   font-weight: 600;
+}
+.container-lista-reproduccion .lista-reproduccion li .titulo-cancion__lista-reproduccion, .container-lista-reproduccion .lista-reproduccion li .nombre-artista__lista-reproduccion {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.container-lista-reproduccion .lista-reproduccion li .duracion-cancion__lista-reproduccion {
+  text-align: center;
 }
 .container-lista-reproduccion .lista-reproduccion li .favorito_lista-reproduccion {
   padding: 0;
@@ -11603,13 +11611,14 @@ body.dark .lista-reproduccion li:hover {
 }
 .main-perfil-artista .container-banner-artista .nombre-artista-banner {
   color: white;
-  font-weight: bolder;
-  font-size: 2.8rem;
+  font-weight: 700;
+  font-size: 2.4rem;
   top: 10px;
   left: 20px;
   border-bottom: 5px solid #ff7033;
-  line-height: 1;
+  line-height: 1.2;
   letter-spacing: 2px;
+  margin-bottom: 0;
 }
 .main-perfil-artista .container-banner-artista button {
   position: absolute;
@@ -11634,7 +11643,7 @@ body.dark .lista-reproduccion li:hover {
   color: white;
 }
 .main-perfil-artista .container-banner-artista::after {
-  background: linear-gradient(to bottom, #240b3698, #c3143200);
+  background: linear-gradient(to bottom, #240b36d8, #c3143200);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -11648,7 +11657,7 @@ body.dark .lista-reproduccion li:hover {
   display: grid;
   position: relative;
   grid-template-columns: 65px 1fr 130px;
-  grid-gap: 10px;
+  grid-column-gap: 10px;
   background-color: white;
   border-radius: 8px;
   align-items: center;
@@ -11665,12 +11674,12 @@ body.dark .lista-reproduccion li:hover {
   height: 100%;
 }
 .main-perfil-artista .reproductor-album .datos__reproductor-album .titulo__reproductor-album {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 0;
 }
 .main-perfil-artista .reproductor-album .datos__reproductor-album .nombre-artista__reproductor-album {
-  font-size: 0.96rem;
+  font-size: 0.9rem;
   margin-bottom: 0;
 }
 .main-perfil-artista .reproductor-album .datos__reproductor-album .fecha-album {
@@ -11686,8 +11695,15 @@ body.dark .lista-reproduccion li:hover {
   font-size: 1.2rem;
 }
 .main-perfil-artista .lista-reproduccion {
-  max-height: 220px;
+  max-height: 230px;
   overflow-y: scroll;
+}
+.main-perfil-artista .lista-reproduccion li {
+  display: grid;
+  grid-template-columns: 1fr 1fr 70px 30px;
+}
+.main-perfil-artista .lista-reproduccion li:first-of-type .titulo-cancion__lista-reproduccion {
+  grid-column: 1/2;
 }
 .main-perfil-artista .albumes {
   margin-top: 0.9rem;
@@ -11725,6 +11741,9 @@ body.dark .lista-reproduccion li:hover {
 .main-perfil-artista .albumes .album figcaption {
   margin-top: 0.5rem;
   transition: opacity 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .main-perfil-artista .albumes .album time {
   font-size: 0.85rem;
@@ -11776,8 +11795,14 @@ body.dark .bg-circulo {
 }
 
 @media (min-width: 1600px) {
-  .main-perfil-artista .container-banner-artista img {
-    height: 280px;
+  .main-perfil-artista .container-banner-artista .img-artista {
+    height: 240px;
+  }
+  .main-perfil-artista .lista-reproduccion {
+    max-height: 340px;
+  }
+  .main-perfil-artista .albumes .album img {
+    height: 120px;
   }
   .main-perfil-artista .bg-circulo {
     width: 400px;
@@ -11788,8 +11813,14 @@ body.dark .bg-circulo {
   .main-perfil-artista {
     overflow-y: visible;
   }
-  .main-perfil-artista .container-banner-artista img {
-    height: 280px;
+  .main-perfil-artista .container-banner-artista .img-artista {
+    height: 240px;
+  }
+  .main-perfil-artista .lista-reproduccion {
+    max-height: 370px;
+  }
+  .main-perfil-artista .albumes .album img {
+    height: 150px;
   }
   .main-perfil-artista .bg-circulo {
     width: 400px;
@@ -11797,9 +11828,6 @@ body.dark .bg-circulo {
   }
 }
 @media (min-width: 1920px) {
-  .main-perfil-artista .albumes .album img {
-    height: 170px;
-  }
   .main-perfil-artista .bg-circulo {
     width: 500px;
     height: 500px;

@@ -1,2 +1,4 @@
 src/css/estilos.css
 node_modules
+.env
+artistas.json

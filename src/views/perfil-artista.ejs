@@ -6,22 +6,22 @@
       <%- include('partials/_menu_lateral'); %> 
       <main class="main main-perfil-artista">
         <div class="row">
-
-          <div class="col-lg-7 position-relative pe-lg-4 pb-4 pb-lg-0 pt-4 pt-sm-0">
+          <div class="col-xl-7 position-relative pe-xl-4 pb-4  pt-4 pt-sm-0">
             <section class="container-banner-artista shadow-card">
-              <img class="img-artista img-fluid" src="../img/benee-02.jpg" alt="">
-              <h1 class="nombre-artista-banner">Benee</h1>
+              <img class="img-artista img-fluid" src="<%= artista.banner %>" alt="">
+              <p class="nombre-artista-banner"><%= artista.nombre_artista %></p>
               <button id="btn-seguir" class="btn bg-light"><span>Seguir</span> <i class="fas fa-plus"></i></button>
-              <ul class="redes-sociales d-flex list-unstyled">
+              <!-- <ul class="redes-sociales d-flex list-unstyled">
                 <li><a href="#!"><i class="fab fa-instagram " title="Instagram"></i></a></li>
                 <li><a href="#!"><i class="fab fa-twitter " title="Twitter"></i></a></li>
                 <li><a href="#!"><i class="fab fa-facebook " title="Facebook"></i></a></li>
                 <li><a href="#!"><i class="fab fa-youtube " title="Youtube"></i></a></li>
-              </ul> 
+              </ul>  -->
             </section>     
 
-            <h2 class="titulo-seccion mt-4 mt-lg-4">Albumes</h4>
+            <h2 class="titulo-seccion mt-4 mt-lg-5">Albumes</h4>
             <section class="albumes shadow-card">
+              <!-- 
               <figure class="album">
                 <a href="#!">
                   <div class="img-container">
@@ -45,19 +45,32 @@
                   </div>
                   <figcaption> Hey U X <time class="d-block" datetime="2020-11-13">(2020)</time></figcaption>
                 </a>
-              </figure>
+              </figure> -->
+           
+              <% artista.albumes.forEach(album => { %>
+                <figure class="album">
+                  <a href="#!">
+                    <div class="img-container">
+                      <img class="img-fluid" src=" <%= album.cover_album %> " alt="">
+                    </div>
+                    <figcaption> 
+                      <%= album.nombre_album %> <time class="d-block" datetime="2019-06-28">( <%= album.fecha_lanzamiento %> )</time>
+                    </figcaption>
+                  </a>
+                </figure>
+             <% }) %>
             </section> 
           </div>
 
-          <div class="col-lg-5 mt-4 mt-sm-0">
+          <div class="col-xl-5 mt-5 mt-xl-0">
             <article class="reproductor-album shadow-card">
               <div class="miniatura__reproductor-album">
-                <img class="img-fluid" src="../img/hey.jpg" alt="miniatura cancion">
+                <img class="img-fluid" src=" <%=albumDestacado.cover_album %> " alt="miniatura cancion">
               </div>
               <div class="datos__reproductor-album">
-                  <h4 class="titulo__reproductor-album">Hey U X</h4>
-                  <h3 class="nombre-artista__reproductor-album">Benee</h3>
-                  <span class="fecha-album">2020</span>
+                  <p class="titulo__reproductor-album"> <%=albumDestacado.nombre_album %> </p>
+                  <h3 class="nombre-artista__reproductor-album"> <%= artista.nombre_artista %> </h3>
+                  <span class="fecha-album"> <%= albumDestacado.fecha_lanzamiento %> </span>
               </div>
               <button class="btn btn-play" data-play="" >
                 <i class="fas fa-play-circle "></i>
@@ -66,8 +79,34 @@
                 <i class="far fa-heart"></i>
               </button>
             </article>
+
             <div class="container-lista-reproduccion shadow-card mt-4">
-              <ul class="lista-reproduccion"> </ul>
+              <ul class="lista-reproduccion"> 
+                <li>
+                  <div class="titulo-cancion__lista-reproduccion">Nombre</div>
+                  <div class="nombre-artista__lista-reproduccion">Artista</div>
+                  <div class="duracion-cancion__lista-reproduccion">Duracion</div>
+                  <div class="favorito_lista-reproduccion btn" ></div>
+                </li>
+                <% albumDestacado.lista_canciones.forEach(cancion => { %>
+                  <li>
+                    <% if(cancion.nombre_cancion.length > 18) { %>
+                      <div class="titulo-cancion__lista-reproduccion" data-bs-toggle="tooltip" data-bs-placement="bottom" title="<%-cancion.nombre_cancion %>"> <%-cancion.nombre_cancion %> </div>
+                    <% } else { %>
+                      <div class="titulo-cancion__lista-reproduccion"> <%-cancion.nombre_cancion %> </div>
+                    <% } %>
+
+                    <% if(cancion.interprete_cancion.length > 13) { %>
+                      <div class="nombre-artista__lista-reproduccion" data-bs-toggle="tooltip" data-bs-placement="bottom" title="<%-cancion.interprete_cancion %>"> <%-cancion.interprete_cancion%> </div>
+                    <%} else { %>
+                      <div class="nombre-artista__lista-reproduccion"> <%-cancion.interprete_cancion%> </div>
+                    <% } %>
+                    
+                    <div class="duracion-cancion__lista-reproduccion"> <%- cancion.duracion_cancion%> </div>
+                    <button data-favorito="" class="favorito_lista-reproduccion btn" title="Marcar como favorito"><i class="far fa-heart"></i></button>
+                  </li>       
+                <% }) %>
+              </ul>
             </div>
           </div>
         </div>
