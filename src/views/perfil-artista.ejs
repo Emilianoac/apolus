@@ -11,12 +11,6 @@
               <img class="img-artista img-fluid" src="<%= artista.banner %>" alt="">
               <p class="nombre-artista-banner"><%= artista.nombre_artista %></p>
               <button id="btn-seguir" class="btn bg-light"><span>Seguir</span> <i class="fas fa-plus"></i></button>
-              <!-- <ul class="redes-sociales d-flex list-unstyled">
-                <li><a href="#!"><i class="fab fa-instagram " title="Instagram"></i></a></li>
-                <li><a href="#!"><i class="fab fa-twitter " title="Twitter"></i></a></li>
-                <li><a href="#!"><i class="fab fa-facebook " title="Facebook"></i></a></li>
-                <li><a href="#!"><i class="fab fa-youtube " title="Youtube"></i></a></li>
-              </ul>  -->
             </section>     
 
             <h2 class="titulo-seccion mt-5">Álbumes</h4>
@@ -87,16 +81,5 @@
         <div class="bg-circulo"></div>
       </main>
       <%- include('partials/_reproductor-bottom'); %> 
-
-      <%- include('partials/_modal-registrarse'); %> 
-      <%- include('partials/_modal-ajustes'); %> 
     </div>
-    <template id="item-lista-reproduccion">
-      <li>
-        <div class="titulo-cancion__lista-reproduccion"></div>
-        <div class="nombre-artista__lista-reproduccion"></div>
-        <div class="duracion-cancion__lista-reproduccion"></div>
-        <button data-favorito="" class="favorito_lista-reproduccion btn" title="Marcar como favorito"><i class="far fa-heart"></i></button>
-      </li>
-    </template>
 <%- include('partials/_footer.ejs') %> 
