@@ -41,7 +41,11 @@
 
             .favorito_lista-reproduccion {
                 padding: 0;
-                color: $secondary;
+                color: $secondary; 
+
+                &:focus {
+                    box-shadow: unset;
+                }
                 
             }
 

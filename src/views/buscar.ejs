@@ -83,7 +83,7 @@
                 <% artistasBusqueda.forEach(function (artista) { %>
                   <div class="col-lg-3 col-6 mt-4 mt-lg-0">
                     <article class="categoria-musica-card shadow-card">
-                      <a href="/perfil-artista">
+                      <a href="/artista/<%= artista.slug%>">
                         <div class="img-container">
                           <img class="img-fluid" src="<%=artista.banner %> " alt="miniatura">
                         </div>
@@ -111,7 +111,7 @@
                 <% primerAlbum.forEach(function (album) { %>
                   <div class="col-lg-3 col-6 mt-4 mt-lg-0">
                     <article class="categoria-musica-card shadow-card">
-                      <a href="/perfil-artista">
+                      <a href="#!">
                         <div class="img-container">
                           <img class="img-fluid" src="<%=album.cover_album %> " alt="miniatura">
                         </div>
