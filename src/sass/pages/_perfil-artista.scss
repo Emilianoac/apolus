@@ -48,6 +48,10 @@
             color: $secondary;
             padding: 0;
             font-size: 1.2rem;
+
+            &:focus {
+                box-shadow: unset;
+            }
         }
     }
 
@@ -242,9 +246,7 @@ body.dark {
     .main-perfil-artista {
 
         .bg-circulo {
-            width: 500px;
-            height: 500px;
-            right: -140px;
+            display: none; 
         }
     }
 }

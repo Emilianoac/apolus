@@ -11230,6 +11230,9 @@ input:checked + .slider:after {
   margin-left: 5px;
   line-height: 1;
 }
+.reproductor-principal .container-datos-cancion .marcar-favorito:focus {
+  box-shadow: unset;
+}
 
 body.dark .reproductor-principal {
   background-color: #1a1a1a;
@@ -11535,6 +11538,9 @@ body.dark .buscador-navbar button {
   padding: 0;
   color: #ff7033;
 }
+.container-lista-reproduccion .lista-reproduccion li .favorito_lista-reproduccion:focus {
+  box-shadow: unset;
+}
 .container-lista-reproduccion .lista-reproduccion li:hover {
   background-color: #e6e6e6;
 }
@@ -11725,6 +11731,9 @@ body.dark .lista-reproduccion li:hover {
   padding: 0;
   font-size: 1.2rem;
 }
+.main-perfil-artista .reproductor-album .marcar-favorito:focus {
+  box-shadow: unset;
+}
 .main-perfil-artista .lista-reproduccion {
   max-height: 230px;
   overflow-y: scroll;
@@ -11860,9 +11869,7 @@ body.dark .bg-circulo {
 }
 @media (min-width: 1920px) {
   .main-perfil-artista .bg-circulo {
-    width: 500px;
-    height: 500px;
-    right: -140px;
+    display: none;
   }
 }
 @media (max-width: 650px) {
