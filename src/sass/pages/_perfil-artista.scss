@@ -299,10 +299,9 @@ body.dark {
         }
 
         .container-lista-reproduccion  {
-            padding: 1rem;
-    
+
             .lista-reproduccion {
-                padding: 0.5rem;
+                max-height: 300px;
     
                 li {
                     font-size: 0.85rem;
@@ -313,13 +312,6 @@ body.dark {
                         grid-column: 1;
                     }
 
-                    .marcar-favorito {
-                        display: none;
-                    }
-
-                    &:first-of-type {
-                        display: none;
-                    }
                 }
             }
             
