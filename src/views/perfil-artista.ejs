@@ -19,36 +19,10 @@
               </ul>  -->
             </section>     
 
-            <h2 class="titulo-seccion mt-4 mt-lg-5">Albumes</h4>
+            <h2 class="titulo-seccion mt-5">Álbumes</h4>
             <section class="albumes shadow-card">
-              <!-- 
-              <figure class="album">
-                <a href="#!">
-                  <div class="img-container">
-                    <img class="img-fluid" src="../img/album02.jpg" alt="">
-                  </div>
-                  <figcaption> Fire on Marzzs LP <time class="d-block" datetime="2019-06-28">(2019)</time></figcaption>
-                </a>
-              </figure>
-              <figure class="album">
-                <a href="#!">
-                  <div class="img-container">
-                    <img class="img-fluid" src="../img/album01.jpg" alt="">         
-                  </div>
-                  <figcaption> Stella & Steve LP <time class="d-block" datetime="2019-11-15">(2019)</time></figcaption>
-                </a>
-              </figure>
-              <figure class="album">
-                <a href="#!">
-                  <div class="img-container">
-                    <img class="img-fluid" src="../img/hey.jpg" alt="">
-                  </div>
-                  <figcaption> Hey U X <time class="d-block" datetime="2020-11-13">(2020)</time></figcaption>
-                </a>
-              </figure> -->
-           
               <% artista.albumes.forEach(album => { %>
-                <figure class="album">
+                <figure class="album mb-4 mb-lg-0">
                   <a href="#!">
                     <div class="img-container">
                       <img class="img-fluid" src=" <%= album.cover_album %> " alt="">

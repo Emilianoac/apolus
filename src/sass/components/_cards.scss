@@ -139,7 +139,14 @@ body.dark  {
         }
 
         p {
-            font-size: 0.85rem;
+            font-size: 0.83rem;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .tipo-resultado {
+            padding-top: 0;
         }
 
         .btn-play {
