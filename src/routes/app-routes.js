@@ -7,16 +7,15 @@ const {
     renderBusqueda,
     renderIndex,
     renderPerfilArtista,
-    renderFormulario,
-    sendData
+    renderMisListasReproduccion,
+    renderListaReproduccion
 } = controllers
 
 router.get('/', renderIndex);
 router.get('/buscar', renderBusqueda)
 router.get('/artista/:slug',renderPerfilArtista )
-router.get('/formulario', renderFormulario)
-router.post('/subir', sendData)
-
+router.get('/listas-reproduccion', renderMisListasReproduccion)
+router.get('/listas-reproduccion/:slug', renderListaReproduccion)
 
 module.exports = router
 

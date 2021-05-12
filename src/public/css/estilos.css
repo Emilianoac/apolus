@@ -11595,21 +11595,21 @@ body.dark .lista-reproduccion li:hover {
     font-size: 0.85rem;
   }
 }
-.main-perfil-artista .container-banner-artista {
+.container-banner-artista {
   position: relative;
 }
-.main-perfil-artista .container-banner-artista .img-artista {
+.container-banner-artista .img-artista {
   height: 160px;
   width: 100%;
   object-fit: cover;
   border-radius: 9px;
   overflow: hidden;
 }
-.main-perfil-artista .container-banner-artista .nombre-artista-banner, .main-perfil-artista .container-banner-artista button, .main-perfil-artista .container-banner-artista .redes-sociales {
+.container-banner-artista .nombre-artista-banner, .container-banner-artista button, .container-banner-artista .redes-sociales {
   position: absolute;
   z-index: 2;
 }
-.main-perfil-artista .container-banner-artista .nombre-artista-banner {
+.container-banner-artista .nombre-artista-banner {
   color: white;
   font-weight: 700;
   font-size: 2.4rem;
@@ -11620,7 +11620,7 @@ body.dark .lista-reproduccion li:hover {
   letter-spacing: 2px;
   margin-bottom: 0;
 }
-.main-perfil-artista .container-banner-artista button {
+.container-banner-artista button {
   position: absolute;
   right: 20px;
   top: 20px;
@@ -11628,21 +11628,21 @@ body.dark .lista-reproduccion li:hover {
   letter-spacing: 1px;
   font-weight: bolder;
 }
-.main-perfil-artista .container-banner-artista button svg {
+.container-banner-artista button svg {
   color: #ff7033;
 }
-.main-perfil-artista .container-banner-artista .redes-sociales {
+.container-banner-artista .redes-sociales {
   bottom: 10px;
   right: 15px;
   margin: 0;
 }
-.main-perfil-artista .container-banner-artista .redes-sociales li {
+.container-banner-artista .redes-sociales li {
   margin-right: 15px;
 }
-.main-perfil-artista .container-banner-artista .redes-sociales li a {
+.container-banner-artista .redes-sociales li a {
   color: white;
 }
-.main-perfil-artista .container-banner-artista::after {
+.container-banner-artista::after {
   background: linear-gradient(to bottom, #240b36d8, #c3143200);
   position: absolute;
   width: 100%;
@@ -11653,6 +11653,7 @@ body.dark .lista-reproduccion li:hover {
   left: 0;
   border-radius: 9px;
 }
+
 .main-perfil-artista .reproductor-album {
   display: grid;
   position: relative;
