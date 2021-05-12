@@ -1,76 +1,5 @@
-.container-banner-artista {
-    position: relative;
-
-    .img-artista {
-        height: 160px;
-        width: 100%;
-        object-fit: cover;
-        border-radius: 9px;
-        overflow: hidden;
-    }
-    
-    .nombre-artista-banner, button, .redes-sociales {
-        position: absolute;
-        z-index: 2;
-    }
-
-    .nombre-artista-banner {
-        color: $light;
-        font-weight: 700;
-        font-size: 2.4rem;
-        top: 10px;
-        left: 20px;
-        border-bottom: 5px solid $secondary ;
-        line-height: 1.2;
-        letter-spacing: 2px;
-        margin-bottom: 0;
-    }
-
-
-    button {
-        position: absolute; 
-        right: 20px;
-        top: 20px;
-        color: $primary;
-        letter-spacing: 1px;
-        font-weight: bolder;
-
-        svg {
-            color: $secondary;
-        }
-    }
-
-    .redes-sociales {
-        bottom: 10px;
-        right: 15px;
-        margin: 0;
-
-        li {
-            margin-right: 15px;
-
-            a {
-                color: $light;
-            }
-        }
-    }
-
-    &::after {
-        background: linear-gradient(to bottom, #240b36d8, #c3143200);
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        content: '';
-        top: 0;
-        left: 0;
-        border-radius: 9px;
-    }
-}
-
 
 .main-perfil-artista{
-
-
 
     .reproductor-album {
         display: grid;
@@ -336,18 +265,77 @@ body.dark {
             }
 
             button {
-                font-size: 0.9rem;
-                top: 10px;
+                font-size: 0.85rem;
+                top: unset;
+                bottom: 10px;
             }
+        }
+
+        .reproductor-album {
+            grid-template-columns: 65px minmax(70px, 1fr) 100px;
+
+            .datos__reproductor-album {
+
+                .titulo__reproductor-album {
+                    font-size: 0.87rem;
+                }
+            }
+
+            .marcar-favorito {
+                font-size: 1rem;
+            }
+
+            p , h3{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            button {
+                font-size: 2.2rem;
+            }
+        }
+
+        .container-lista-reproduccion  {
+            padding: 1rem;
+    
+            .lista-reproduccion {
+                padding: 0.5rem;
+    
+                li {
+                    font-size: 0.85rem;
+                    grid-template-columns: 1fr 70px;
+    
+                    .nombre-artista__lista-reproduccion {
+                        grid-row: 2;
+                        grid-column: 1;
+                    }
+
+                    .marcar-favorito {
+                        display: none;
+                    }
+
+                    &:first-of-type {
+                        display: none;
+                    }
+                }
+            }
+            
         }
 
         .albumes {
             grid-template-columns: repeat(3, 1fr);
             padding: 0.6em;
 
-            figcaption {
+            .album {
                 font-size: 0.8rem;
+
+                time {
+                    font-size: 0.78rem;
+                }
+
             }
+
         }
 
         .bg-circulo {

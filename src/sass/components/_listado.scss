@@ -135,6 +135,16 @@ body.dark {
 
             li {
                 font-size: 0.85rem;
+                grid-template-columns: 1fr 70px;
+
+                .nombre-artista__lista-reproduccion {
+                    grid-row: 2;
+                    grid-column: 1;
+
+                    .miniatura-cancion {
+                        display: none;
+                    }
+                }
             }
         }
         

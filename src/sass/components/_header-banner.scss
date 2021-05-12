@@ -1,0 +1,84 @@
+.container-banner-artista {
+    position: relative;
+
+    .img-artista {
+        height: 160px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 9px;
+        overflow: hidden;
+    }
+    
+    .nombre-artista-banner, button, .redes-sociales {
+        position: absolute;
+        z-index: 2;
+    }
+
+    .nombre-artista-banner {
+        color: $light;
+        font-weight: 700;
+        font-size: 2.4rem;
+        top: 10px;
+        left: 20px;
+        border-bottom: 5px solid $secondary ;
+        line-height: 1.2;
+        letter-spacing: 2px;
+        margin-bottom: 0;
+    }
+
+
+    button {
+        position: absolute; 
+        right: 10px;
+        top: 20px;
+        color: $primary;
+        letter-spacing: 1px;
+        font-weight: bolder;
+
+        svg {
+            color: $secondary;
+        }
+    }
+
+    .redes-sociales {
+        bottom: 10px;
+        right: 15px;
+        margin: 0;
+
+        li {
+            margin-right: 15px;
+
+            a {
+                color: $light;
+            }
+        }
+    }
+
+    &::after {
+        background: linear-gradient(to bottom, #240b36d8, #c3143200);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        content: '';
+        top: 0;
+        left: 0;
+        border-radius: 9px;
+    }
+}
+
+@media(max-width:650px) {
+
+    .container-banner-artista {
+
+        .nombre-artista-banner {
+            font-size: 1.5rem;
+        }
+
+        button {
+            font-size: 0.85rem;
+            top: unset;
+            bottom: 10px;
+        }
+    }
+}
