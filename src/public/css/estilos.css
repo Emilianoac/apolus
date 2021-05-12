@@ -11610,12 +11610,13 @@ body.dark .lista-reproduccion li:hover {
     font-size: 0.9rem;
     grid-template-columns: 40px 1fr 40px;
     position: relative;
-    padding: 1.1rem;
+    padding: 1.4rem;
     column-gap: 10px;
   }
   .container-lista-reproduccion .lista-reproduccion li .nombre-artista__lista-reproduccion {
     grid-row: 2;
     grid-column: 2;
+    font-size: 0.82rem;
   }
   .container-lista-reproduccion .lista-reproduccion li .miniatura-cancion {
     grid-row: 1/3;
