@@ -1,5 +1,22 @@
 <%- include('partials/_head'); %>
 <body>
-    <h1>404</h1>
+    <input type="checkbox" hidden id="darkmodeHidden">
+    <div class="main-container">
+      <%- include('partials/_top-navbar'); %>
+      <%- include('partials/_menu_lateral'); %> 
+      <main class="main main-busqueda main-404">
+        <div class="row mb-4">
+          <div class="col-lg-4"></div>
+          <div class="col-lg-4">
+              <h1>404</h1>  
+              <p class="text-white  text-center">Contenido no encontrado</p>   
+          </div>
+          <div class="col-lg-4"></div>
+        </div>
+      </main>
+      <%- include('partials/_reproductor-bottom'); %> 
+      <%- include('partials/_modal-registrarse'); %> 
+      <%- include('partials/_modal-ajustes'); %> 
+    </div>
     
 <%- include('partials/_footer.ejs') %> 

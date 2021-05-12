@@ -8,7 +8,8 @@ const {
     renderIndex,
     renderPerfilArtista,
     renderMisListasReproduccion,
-    renderListaReproduccion
+    renderListaReproduccion,
+    renderFavoritas
 } = controllers
 
 router.get('/', renderIndex);
@@ -16,6 +17,7 @@ router.get('/buscar', renderBusqueda)
 router.get('/artista/:slug',renderPerfilArtista )
 router.get('/listas-reproduccion', renderMisListasReproduccion)
 router.get('/listas-reproduccion/:slug', renderListaReproduccion)
+router.get('/favoritas', renderFavoritas)
 
 module.exports = router
 

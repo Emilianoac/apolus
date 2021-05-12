@@ -17,7 +17,7 @@
           <section>
               <h2 class=" mb-lg-3 mb-0">Busquedas recientes</h2>
               <div class="row">
-                <% artistas.forEach(function (artista) { %>
+                <% busquedasRecientes.forEach(function (artista) { %>
                   <div class="col-lg-3 col-6 mt-4 mt-lg-0">
                     <article class="categoria-musica-card shadow-card">
                       <a href="/artista/<%=artista.slug %>">
@@ -85,9 +85,9 @@
                     <article class="categoria-musica-card shadow-card">
                       <a href="/perfil-artista">
                         <div class="img-container">
-                          <img class="img-fluid" src="<%=artista.miniatura %> " alt="miniatura">
+                          <img class="img-fluid" src="<%=artista.banner %> " alt="miniatura">
                         </div>
-                        <p class="titulo-resultado mb-0"> <%= artista.nombre%> </p>
+                        <p class="titulo-resultado mb-0"> <%= artista.nombre_artista%> </p>
                       </a>
                       <button data-play class="btn btn-play"> <i class="fas fa-play-circle"></i></button>
                     </article>
@@ -106,16 +106,17 @@
         <%#--- Album ----%>
         <div class="row">
           <section>
-              <h2 class=" mb-lg-3 mb-0">Albumes</h2>
+              <h2 class=" mb-lg-3 mb-0">Álbumes</h2>
               <div class="row">
-                <% albumBusqueda.forEach(function (album) { %>
+                <% primerAlbum.forEach(function (album) { %>
                   <div class="col-lg-3 col-6 mt-4 mt-lg-0">
                     <article class="categoria-musica-card shadow-card">
                       <a href="/perfil-artista">
                         <div class="img-container">
-                          <img class="img-fluid" src="<%=album.miniatura %> " alt="miniatura">
+                          <img class="img-fluid" src="<%=album.cover_album %> " alt="miniatura">
                         </div>
-                        <p class="titulo-resultado mb-0"> <%= album.nombre %> </p>
+                        <p class="titulo-resultado mb-0"> <%= album.nombre_album %> </p>
+                        <p class="tipo-resultado"><%= album.lista_canciones[0].interprete_cancion %> </p>
                       </a>
                       <button data-play class="btn btn-play"> <i class="fas fa-play-circle"></i></button>
                     </article>

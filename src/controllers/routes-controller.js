@@ -1,17 +1,7 @@
-const datos = require('../data/datos.js')
 
 const ListaReproduccion = require('../models/Listas_reproduccion')
 const Artista = require('../models/Artista')
 
-const { 
-    canciones, 
-    recientes, 
-    busquedasRecientes, 
-    cancionesBusqueda,
-    albumBusqueda,
-    artistasBusqueda,
-    cancionesFavoritas,
-} = datos
 
 const renderIndex = async (req, res) => {
     let artistas = await Artista.find({recomendado: false})
@@ -21,17 +11,27 @@ const renderIndex = async (req, res) => {
 };
 
 const renderBusqueda =  async (req, res) => {
-    let artistas = await Artista.find({recomendado: false})
+    let busquedasRecientes = await Artista.find({recomendado: {$eq: true}}).limit(4)
     let cancionesBusquedas = await Artista.find({recomendado: true}).limit(4)
     let primerAlbum = []
     cancionesBusquedas.forEach(album => {
         primerAlbum.push(album.albumes[0])
     })
-    res.render('buscar', { artistas, albumBusqueda, recientes,  primerAlbum,  artistasBusqueda})
+    let artistasBusqueda = await Artista.find({recomendado: false}).limit(4)
+    res.render('buscar', { 
+        busquedasRecientes,  
+        artistasBusqueda,  
+        primerAlbum
+    })
 };
 
-const renderFavoritas = (req, res) => {
-    res.render('favoritas', {cancionesFavoritas})
+const renderFavoritas = async (req, res) => {
+    let cancionesFavoritas = await Artista.find().limit(8)
+    let favoritas = []
+    cancionesFavoritas.forEach(album => {
+        favoritas.push(album.albumes[0])
+    })
+    res.render('favoritas', {favoritas})
 };
 
 const renderMisListasReproduccion = async (req, res) => {
@@ -71,4 +71,5 @@ module.exports = {
     renderPerfilArtista,
     renderMisListasReproduccion,
     renderListaReproduccion,
+    renderFavoritas
 }
