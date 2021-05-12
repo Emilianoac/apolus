@@ -1,14 +1,14 @@
 const {Schema, model} = require('mongoose')
 const slugify = require('slugify')
 
-
-
 const artistaSchemma = new Schema({
     nombre_artista: {
         type: String, 
         lowercase: true
     },
     banner: String,
+    reciente: Boolean,
+    recomendado: Boolean,
     slug: { 
         type: String,
         required: true,
@@ -37,12 +37,10 @@ const artistaSchemma = new Schema({
 
 
 artistaSchemma.pre('validate', function(next) {
-    
     if(this.nombre_artista) {
         this.slug = slugify(this.nombre_artista, {lower: true, 
         strict: true})
     }
-
     next()
 })
 
