@@ -11669,6 +11669,11 @@ body.dark .lista-reproduccion li:hover {
   border-radius: 9px;
 }
 
+@media (min-width: 1600px) {
+  .container-banner-artista .img-artista {
+    height: 220px;
+  }
+}
 @media (max-width: 650px) {
   .container-banner-artista .nombre-artista-banner {
     font-size: 1.5rem;

@@ -67,6 +67,16 @@
     }
 }
 
+@media(min-width:1600px) {
+
+    .container-banner-artista {
+
+        .img-artista {
+            height: 220px;
+        }
+    }
+}
+
 @media(max-width:650px) {
 
     .container-banner-artista {
