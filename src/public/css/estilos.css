@@ -11607,7 +11607,7 @@ body.dark .lista-reproduccion li:hover {
     max-height: auto;
   }
   .container-lista-reproduccion .lista-reproduccion li {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     grid-template-columns: 40px 1fr 40px;
     position: relative;
     padding: 1.1rem;
@@ -11624,7 +11624,7 @@ body.dark .lista-reproduccion li:hover {
     position: absolute;
     top: 6px;
     right: 10px;
-    font-size: 0.9rem;
+    font-size: 0.96rem;
   }
   .container-lista-reproduccion .lista-reproduccion li .duracion-cancion__lista-reproduccion {
     grid-row: 2;
