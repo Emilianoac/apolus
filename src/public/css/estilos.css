@@ -11600,9 +11600,10 @@ body.dark .lista-reproduccion li:hover {
 @media (max-width: 650px) {
   .container-lista-reproduccion {
     padding: 0;
+    overflow: hidden;
   }
   .container-lista-reproduccion .lista-reproduccion {
-    padding: 1.2rem;
+    padding: 0;
     max-height: auto;
   }
   .container-lista-reproduccion .lista-reproduccion li {
@@ -11622,7 +11623,7 @@ body.dark .lista-reproduccion li:hover {
   .container-lista-reproduccion .lista-reproduccion li .favorito_lista-reproduccion {
     position: absolute;
     top: 6px;
-    right: 16px;
+    right: 10px;
     font-size: 0.9rem;
   }
   .container-lista-reproduccion .lista-reproduccion li .duracion-cancion__lista-reproduccion {
