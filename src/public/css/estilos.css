@@ -10884,6 +10884,7 @@ body.dark h2, body.dark .h2, body.dark h4, body.dark .h4 {
   padding: 2rem 3.4rem;
   padding-top: 6rem;
   margin: 0 auto;
+  padding-bottom: 5rem;
   z-index: 1;
 }
 
