@@ -11610,7 +11610,7 @@ body.dark .lista-reproduccion li:hover {
     font-size: 0.9rem;
     grid-template-columns: 40px 1fr 40px;
     position: relative;
-    padding: 1.4rem;
+    padding: 1.6rem 1.4rem;
     column-gap: 10px;
   }
   .container-lista-reproduccion .lista-reproduccion li .nombre-artista__lista-reproduccion {
@@ -11623,9 +11623,9 @@ body.dark .lista-reproduccion li:hover {
   }
   .container-lista-reproduccion .lista-reproduccion li .favorito_lista-reproduccion {
     position: absolute;
-    top: 6px;
-    right: 10px;
-    font-size: 0.96rem;
+    top: 10px;
+    right: 17px;
+    font-size: 1rem;
   }
   .container-lista-reproduccion .lista-reproduccion li .duracion-cancion__lista-reproduccion {
     grid-row: 2;
