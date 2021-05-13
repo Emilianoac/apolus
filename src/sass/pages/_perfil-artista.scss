@@ -30,8 +30,9 @@
             }
 
             .nombre-artista__reproductor-album {
-                font-size: 0.9rem;
+                font-size: 0.85rem;
                 margin-bottom: 0;
+                color: #6f6d6d;
             }
 
             .fecha-album {
@@ -159,6 +160,13 @@ body.dark {
         background-color: $dark-light;
         color: $light;
 
+        .datos__reproductor-album {
+
+            .nombre-artista__reproductor-album {
+                color: #a6a4a4;
+            }
+        }
+            
     }
 
     .titulo-seccion {
@@ -191,6 +199,7 @@ body.dark {
 @media(min-width:1600px) {
     
     .main-perfil-artista {
+        padding-top: 8rem;
 
         .container-banner-artista {
 
@@ -208,8 +217,9 @@ body.dark {
         }
 
         .bg-circulo {
-            width: 400px;
-            height: 400px;
+            width: 500px;
+            height: 500px;
+            bottom: -240px;
         }
     }
 }
@@ -233,11 +243,6 @@ body.dark {
         .albumes .album img {
             height: 150px;
         }
-
-        .bg-circulo {
-            width: 400px;
-            height: 400px;
-        }
     }
 }
 
@@ -246,7 +251,7 @@ body.dark {
     .main-perfil-artista {
 
         .bg-circulo {
-            display: none; 
+            display: none;
         }
     }
 }
@@ -311,7 +316,6 @@ body.dark {
                         grid-row: 2;
                         grid-column: 1;
                     }
-
                 }
             }
             

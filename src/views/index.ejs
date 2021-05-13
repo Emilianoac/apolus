@@ -4,7 +4,7 @@
     <div class="main-container">
       <%- include('partials/_top-navbar'); %> 
       <%- include('partials/_menu_lateral'); %> 
-      <main class="main main-perfil-artista">
+      <main class="main">
 
         <%#--- Escuchados recientemente ----%>
         <section class="mt-4">
@@ -80,16 +80,5 @@
 
       </main>
       <%- include('partials/_reproductor-bottom'); %> 
-      
-      <%- include('partials/_modal-registrarse'); %> 
-      <%- include('partials/_modal-ajustes'); %> 
     </div>
-    <template id="item-lista-reproduccion">
-      <li>
-        <div class="titulo-cancion__lista-reproduccion"></div>
-        <div class="nombre-artista__lista-reproduccion"></div>
-        <div class="duracion-cancion__lista-reproduccion"></div>
-        <button data-favorito="" class="favorito_lista-reproduccion btn" title="Marcar como favorito"><i class="far fa-heart"></i></button>
-      </li>
-    </template>
 <%- include('partials/_footer.ejs') %> 

@@ -211,10 +211,13 @@ body.dark {
 
 
 
+
+
+
 // Media queries 
 
  @media(max-width:1199px) {
-     .top-navbar {
+    .top-navbar {
 
         .buscador-navbar {
             max-width: 360px;
@@ -231,6 +234,13 @@ body.dark {
     .main-container {
         grid-template-columns: 1fr;
         height: auto;
+    }
+
+    .main {
+        padding: 2rem;
+        padding-top: 9rem;
+        padding-bottom: 6rem;
+        grid-column: 1/2;
     }
 
     .top-navbar {
@@ -312,12 +322,6 @@ body.dark {
                 display: none;
             }
         }
-    }
-
-    .main {
-        padding: 2rem;
-        padding-top: 9rem;
-        grid-column: 1/2;
     }
 }
 
