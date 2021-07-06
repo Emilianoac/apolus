@@ -1,3 +1,3 @@
 # Apolus
 
-Front end aplicación de streaming musical. Realizado con Node, Express y Mongodb.
+Aplicación de streaming musical. Realizada con Node, Express y Mongodb 
